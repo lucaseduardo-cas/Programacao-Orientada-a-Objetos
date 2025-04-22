@@ -1,13 +1,3 @@
-/*
-//g++ -g programa.cpp -o programa
-//gdb ./programa
-//break Pessoa::Pessoa
-//break Pessoa::~Pessoa
-//run
-//print nome
-//continue
-*/
-
 #include <iostream>
 
 using namespace std;
