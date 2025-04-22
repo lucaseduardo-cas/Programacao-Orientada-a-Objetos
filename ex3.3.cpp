@@ -45,7 +45,7 @@ public:
             std::cout <<"Valor negativo! Deposite um valor maior do que 0: " << std::endl;
         } else {
             saldo += valor;
-            std::cout <<"DepÃ³sito de R$" << valor << " realizado com sucesso!" << std::endl;
+            std::cout <<"Depósito de R$" << valor << " realizado com sucesso!" << std::endl;
         }
     }
 

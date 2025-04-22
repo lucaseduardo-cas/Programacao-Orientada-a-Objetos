@@ -1,10 +1,11 @@
 /*
-?? Analogia rápida:
-private ? tranca o dado no cofre. Só o próprio dono (a classe) tem a chave.
+Código com herança: ClienteVip acessando identificador
+- Analogia rápida:
+private = tranca o dado no cofre. Só o próprio dono (a classe) tem a chave.
 
-protected ? o dono e os filhos têm a chave.
+protected = o dono e os filhos têm a chave.
 
-public ? tá em cima da mesa, qualquer um vê.
+public = tá em cima da mesa, qualquer um vê.
 */
 
 #include <iostream>

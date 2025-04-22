@@ -4,23 +4,23 @@ private	  - Somente dentro da própria classe
 protected - Dentro da classe e suas subclasses (herança)
 public	  - Pode ser acessado de qualquer lugar (ex: no main)
 
-?? private ? atributo saldo
+* private - atributo saldo
 - Ele é escondido da parte externa (como o main).
 - Só pode ser manipulado por métodos públicos da própria classe (depositar, sacar, consultarSaldo).
 - Isso protege contra alterações diretas indesejadas:
     cliente1.saldo = 999999; // ? Isso seria um risco se fosse public
 
-?? protected ? atributo identificador
+* protected - atributo identificador
 - Ele não pode ser acessado fora da classe (como no main).
 - Mas pode ser acessado por classes que herdam ClienteBanco (se você fizesse herança futuramente).
 - Bom pra manter o controle, mas permitir acesso controlado em classes filhas.
 
-? public ? atributos nome e numeroConta + métodos
+* public - atributos nome e numeroConta + métodos
 - Podem ser acessados de qualquer lugar.
 - Métodos depositar, sacar, consultarSaldo, exibirIdentificador são a interface pública da sua classe, 
 ou seja, como o mundo externo interage com ela.
 
-?? Encapsulamento ? o que é isso?
+* Encapsulamento - o que é isso?
 - Encapsular = esconder detalhes internos da classe, expondo só o necessário.
 - Você esconde saldo (com private) e obriga o usuário a usar métodos como depositar() e consultarSaldo(). Isso evita erros e garante segurança.
 - Exemplo de erro que seria possível se não usasse encapsulamento:

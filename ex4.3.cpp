@@ -1,15 +1,3 @@
-ZIP Extractor
-ZIP Extractor
-Free app for opening and creating ZIP files
-Lucas
-Google Account
-arrow_back
-2503.zip
-code Highlight Syntax wrap_text
-unfold_more skip_previous skip_next close
-code
-Pessoa3.cpp (2 KB)
-file_download Download CPP Save to Drive Save to Drive more_vert
 #include <iostream>
 using namespace std;
 
