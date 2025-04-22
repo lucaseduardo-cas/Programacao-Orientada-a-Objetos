@@ -1,129 +1,130 @@
 /*
-Escreva um programa com duas classes que apresentem um relacionamento por herança. O programa 
-deverá apresentar, construir, destruir, getter, setter. No exemplo, deverão ser explorados os 
-modificadores de tipo para atributos.
+Tarefa 23/03/2025
+1- Estudar exemplo (verificar a escrita e execução - compilar, por pra rodar e depuração, verificar o que está acontecendo com os 
+atributos e métodos do programa).
+
+2- Criar uma classe genérica e duas classes especializadas, sendo uma mais genérica chamada "animal" e depois criar classes mais 
+específicas, por exemplo: "mamífero", "réptil" cujo relacionamento da classe genérica será por herança simples. Definir pelo menos 
+2 atributos para cada uma das classes. Definir método construtor e destrutor para cada uma dessas classes e pelo menos mais dois 
+métodos de get e set para cada uma das classes. 
+Avaliar o efeito da execução quando modificar os tipos de acesso entre os atributos de classe genérica e a classe especializada 
+(definir tudo como público, depois protegido e depois como privado. Rastrear com o GDB para ver o que está acontecendo lá).
+
+- Trabalhar Geter e Setter
+- Trabalhar Herança
 */
 
 #include <iostream>
-#include <string>
-
 using namespace std;
 
-// Classe base que representa uma Pessoa
-class Pessoa {
+// Classe genérica Animal
+class Animal {
 private:
-    string cpf; // Atributo privado: só acessível dentro da própria classe
-
-protected:
-    string nome;  // Atributo protegido: acessível na classe base e derivadas
+    string nome;
     int idade;
 
 public:
-    // Construtor da classe Pessoa
-    Pessoa(string nome, int idade, string cpf) {
+    // Construtor
+    Animal(string nome, int idade) {
         this->nome = nome;
         this->idade = idade;
-        this->cpf = cpf;
-
-        cout << "[Pessoa criada]\n";
-        cout << "Nome: " << nome << ", Idade: " << idade << ", CPF: " << cpf << endl;
+        cout << "Construtor chamado para Animal: " << nome << endl;
     }
 
     // Destrutor
-    ~Pessoa() {
-        cout << "[Destrutor de Pessoa] " << nome << endl;
+    ~Animal() {
+        cout << "Destrutor chamado para Animal: " << nome << endl;
     }
 
-    // Getter para o CPF
-    string getCpf() const {
-        return cpf;
+    // Método Getters
+    string getNome() const { return nome; }
+    int getIdade() const { return idade; }
+
+    // Método Setters
+    void setNome(string novoNome) { nome = novoNome; }
+    void setIdade(int novaIdade) { idade = novaIdade; }
+};
+
+// Classe especializada Mamífero
+class Mamifero : public Animal {
+private:
+    string tipoPelo;
+
+public:
+    // Construtor
+    Mamifero(string nome, int idade, string tipoPelo) : Animal(nome, idade) {
+        this->tipoPelo = tipoPelo;
+        // cout << "Construtor chamado para Mamífero: " << nome << endl;
+        cout << "Construtor chamado para MamÃ­fero: " << getNome() << endl;
     }
 
-    // Setter para o CPF
-    void setCpf(string novoCpf) {
-        cout << "Alterando CPF de " << cpf << " para " << novoCpf << endl;
-        cpf = novoCpf;
+    // Destrutor
+    ~Mamifero() {
+        //cout << "Destrutor chamado para Mamífero: " << nome << endl;
+        cout << "Destrutor chamado para MamÃ­fero: " << getNome() << endl;
     }
 
-    // Getters e Setters para nome
-    string getNome() const {
-        return nome;
-    }
+    // Métodos Getters
+    string getTipoPelo() const { return tipoPelo; }
 
-    void setNome(string novoNome) {
-        cout << "Alterando nome de " << nome << " para " << novoNome << endl;
-        nome = novoNome;
-    }
+    // Métodos Setters
+    void setTipoPelo(string novoTipoPelo) { tipoPelo = novoTipoPelo; }
 
-    // Getters e Setters para idade
-    int getIdade() const {
-        return idade;
-    }
-
-    void setIdade(int novaIdade) {
-        cout << "Alterando idade de " << idade << " para " << novaIdade << endl;
-        idade = novaIdade;
+    void exibirDados() {
+        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tipo de pelo: " << tipoPelo << endl;
+        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tipo de pelo: " << tipoPelo << endl;
     }
 };
 
-// Classe derivada Estudante, que herda de Pessoa
-class Estudante : public Pessoa {
+// Classe especializada Reptil
+class Reptil : public Animal {
 private:
-    string curso; // Atributo próprio da classe Estudante
+    bool temEscamas;
 
 public:
-    // Construtor da classe Estudante
-    Estudante(string nome, int idade, string cpf, string curso)
-        : Pessoa(nome, idade, cpf) {
-        this->curso = curso;
-
-        cout << "[Estudante criado]\n";
-        cout << "Curso: " << curso << endl;
+    // Construtor
+    Reptil(string nome, int idade, bool temEscamas) : Animal(nome, idade) {
+        this->temEscamas = temEscamas;
+        //cout << "Construtor chamado para Reptil: " << nome << endl;
+        cout << "Construtor chamado para RÃ©ptil: " << getNome() << endl;
     }
 
     // Destrutor
-    ~Estudante() {
-        cout << "[Destrutor de Estudante] " << nome << endl;
+    ~Reptil() {
+        //cout << "Destrutor chamado para Reptil: " << nome << endl;
+        cout << "Destrutor chamado para RÃ©ptil: " << getNome() << endl;
     }
 
-    // Getter para o curso
-    string getCurso() const {
-        return curso;
-    }
+    // Métodos Getters
+    bool getTemEscamas() const { return temEscamas; }
 
-    // Setter para o curso
-    void setCurso(string novoCurso) {
-        cout << "Alterando curso de " << curso << " para " << novoCurso << endl;
-        curso = novoCurso;
-    }
+    // Métodos Setters
+    void setTemEscamas(bool novoTemEscamas) { temEscamas = novoTemEscamas; }
 
-    // Exibir todos os dados do estudante
-    void exibirDados() const {
-        cout << "\n[ DADOS DO ESTUDANTE ]\n";
-        cout << "Nome: " << getNome() << endl;
-        cout << "Idade: " << getIdade() << " anos" << endl;
-        cout << "CPF: " << getCpf() << endl;
-        cout << "Curso: " << getCurso() << endl;
+    void exibirDados() {
+        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tem escamas: " << (temEscamas ? "Sim" : "Não") << endl;
+        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tem escamas: " << (temEscamas ? "Sim" : "Não") << endl;
     }
 };
 
 int main() {
-    // Criando objeto aluno com os dados iniciais
-    Estudante aluno("Lucas", 20, "000.000.000-00", "Sistemas de Informação");
+    cout << "Criando um Mamífero e um Réptil...\n";
+    Mamifero cachorro("Rex", 5, "Curto");
+    Reptil cobra("Naja", 3, true);
 
-    // Mostrando os dados iniciais
-    aluno.exibirDados();
+    cout << "\nExibindo dados:\n";
+    cachorro.exibirDados();
+    cobra.exibirDados();
 
-    // Alterando dados com os métodos setters
-    cout << "\n[ ALTERAÇÕES NO OBJETO ALUNO ]\n";
-    aluno.setCurso("Engenharia de Software");
-    aluno.setIdade(21);
-    aluno.setCpf("111.111.111-11");
-    aluno.setNome("Lucas Eduardo");
+    cout << "\nModificando atributos...\n";
+    cachorro.setIdade(6);
+    cachorro.setTipoPelo("Longo");
+    cobra.setTemEscamas(false);
 
-    // Exibindo os dados atualizados
-    cout << "\n[ DADOS ATUALIZADOS APÓS AS ALTERAÇÕES ]\n";
-    aluno.exibirDados();
+    cout << "\nDados atualizados:\n";
+    cachorro.exibirDados();
+    cobra.exibirDados();
 
+    cout << "\nEncerrando programa...\n";
     return 0;
 }

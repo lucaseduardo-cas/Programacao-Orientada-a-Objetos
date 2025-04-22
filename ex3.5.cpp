@@ -1,4 +1,5 @@
 /*
+Tarefa 18/03/2025
 Código com herança: ClienteVip acessando identificador
 - Analogia rápida:
 private = tranca o dado no cofre. Só o próprio dono (a classe) tem a chave.

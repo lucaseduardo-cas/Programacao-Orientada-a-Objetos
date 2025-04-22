@@ -1,33 +1,35 @@
 /*
-44- Tarefa 18/03/2025: Definir uma classe para representar o cliente de um banco. Pelo menos 4
-atributos e 4 m√©todos.
+Tarefa 18/03/2025
+Definir uma classe para representar o cliente de um banco. Pelo menos 4
+atributos e 4 mÈtodos.
 (banco), tem que ter o saldo e identificador do cliente e o identificador n√£o pode ser o nome do cliente.
-N√£o √© pra usar o "construtor" e tamb√©m definir no m√≠nimo 4 m√©todos para manipular os atributos de cada
+N„o È para usar o "construtor" e tambÈm definir no m√≠nimo 4 mÈtodos para manipular os atributos de cada
 cliente. Ex.: 
-m√©todo saque, tem que trabalhar saldo e subtrair e par√¢metro que estou passando. Se estou criando um
-dep√≥sito tem que somar.
+m√©todo saque, tem que trabalhar saldo e subtrair e par‚metro que estou passando. Se estou criando um
+DepÛsito tem que somar.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 Tarefa: Classe ClienteBanco
 
 Definir uma classe em C++ chamada ClienteBanco para representar um cliente de um banco. Esta classe deve possuir:
 
-- Atributos (m√≠nimo 4):
+- Atributos (mÌnimo 4):
 Saldo: Representa o saldo da conta do cliente.
 Identificador do Cliente: Um valor √∫nico para identificar o cliente. Importante: Este identificador n√£o pode ser o mesmo que o nome do cliente.
 Nome do Cliente: O nome completo do cliente.
 N√∫mero da Conta: O n√∫mero da conta banc√°ria do cliente.
 
-- M√©todos (m√≠nimo 4 para manipular os atributos):
-depositar(double valor): Recebe um valor como par√¢metro e adiciona esse valor ao saldo do cliente. Valide se o valor do dep√≥sito √© positivo.
-sacar(double valor): Recebe um valor como par√¢metro e subtrai esse valor do saldo do cliente. Realize as seguintes valida√ß√µes:
+- MÈtodos (mÌnimo 4 para manipular os atributos):
+depositar(double valor): Recebe um valor como par‚metro e adiciona esse valor ao saldo do cliente. Valide se o valor do depÛsito È positivo.
+sacar(double valor): Recebe um valor como par‚metro e subtrai esse valor do saldo do cliente. Realize as seguintes validaÁıes:
 O valor do saque deve ser positivo.
 Deve haver saldo suficiente para realizar o saque.
 consultarSaldo(): Exibe o saldo atual do cliente.
 exibirIdentificador(): Exibe o identificador √∫nico do cliente.
-Restri√ß√£o:
 
-N√£o utilize um construtor com par√¢metros para inicializar os atributos da classe diretamente na declara√ß√£o. Voc√™ pode usar um m√©todo separado para essa finalidade ou inicializar os atributos de outra forma.
+RestriÁ„o:
+N„o utilize um construtor com par√¢metros para inicializar os atributos da classe diretamente na declaraÁ„o. VocÍ pode usar um mÈtodo 
+separado para essa finalidade ou inicializar os atributos de outra forma.
 */
 
 #include <iostream>

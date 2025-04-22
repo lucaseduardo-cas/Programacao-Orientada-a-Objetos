@@ -1,3 +1,5 @@
+// Exemplo professor
+
 //gcc -g -o pessoa2 pessoa2.cpp
 //gdb ./pessoa2
 //(gdb) b main

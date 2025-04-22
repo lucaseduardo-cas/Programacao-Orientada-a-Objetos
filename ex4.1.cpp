@@ -1,3 +1,5 @@
+// Exemplo professor
+
 //g++ -g programa.cpp -o programa
 //gdb ./programa
 //break Pessoa::Pessoa

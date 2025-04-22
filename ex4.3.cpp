@@ -1,3 +1,5 @@
+// Exemplo professor
+
 #include <iostream>
 using namespace std;
 
