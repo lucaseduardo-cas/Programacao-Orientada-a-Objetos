@@ -66,7 +66,7 @@ int main() {
     // vip.identificador = 1234; ? Erro: identificador é protected, não pode ser acessado direto aqui
     vip.depositar(500);
     vip.sacar(300);
-    
+
     vip.mostrarDadosVip(); // ? Aqui a classe derivada acessa os dados da base
 
     return 0;

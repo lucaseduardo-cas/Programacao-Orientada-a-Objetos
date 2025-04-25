@@ -18,7 +18,7 @@ public	  - Pode ser acessado de qualquer lugar (ex: no main)
 
 * public - atributos nome e numeroConta + métodos
 - Podem ser acessados de qualquer lugar.
-- Métodos depositar, sacar, consultarSaldo, exibirIdentificador são a interface pública da sua classe, 
+- Métodos depositar, sacar, consultarSaldo, exibirIdentificador são a interface pública da sua classe,
 ou seja, como o mundo externo interage com ela.
 
 * Encapsulamento - o que é isso?

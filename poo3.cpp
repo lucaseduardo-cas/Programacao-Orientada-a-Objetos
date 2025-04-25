@@ -18,19 +18,19 @@ int main () {
     std::cout << v3->getVelMax() <<std::endl;
 
     if(v1->getLigado()) {
-        cout << "Veículo 1 está ligado" << endl;
+        cout << "VeÃ­culo 1 estÃ¡ ligado" << endl;
     } else {
-        cout << "Veículo 1 está desligado" << endl;
+        cout << "VeÃ­culo 1 estÃ¡ desligado" << endl;
     }
     if(v2->getLigado()) {
-        cout << "Veículo 2 está ligado" << endl;
+        cout << "VeÃ­culo 2 estÃ¡ ligado" << endl;
     } else {
-        cout << "Veículo 2 está desligado" << endl;
+        cout << "VeÃ­culo 2 estÃ¡ desligado" << endl;
     }
     if(v3->getLigado()) {
-        cout << "Veículo 3 está ligado" << endl;
+        cout << "VeÃ­culo 3 estÃ¡ ligado" << endl;
     } else {
-        cout << "Veículo 3 está desligado" << endl;
+        cout << "VeÃ­culo 3 estÃ¡ desligado" << endl;
     }
 
     return 0;

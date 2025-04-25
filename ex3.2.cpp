@@ -8,7 +8,7 @@ print nome
 continue
 
 3- Tarefa 11/03/2025: Tarefa POO - Modificar o exemplo aluno3.cpp
-(Classrom), incluindo mais 3 atributos e dois métodos.
+(Classrom), incluindo mais 3 atributos e dois mÃ©tdoso.
 */
 
 #include <iostream>
@@ -19,29 +19,29 @@ class Aluno {
 private:
     std::string nome; //Atributo privado
     // Incluindo mais 3 atributos
-    int idade; 
+    int idade;
     std::string matricula;
     int sala;
 
 public:
     // Construtor
-    Aluno(const std::string& nome, int idade, std::string& matricula) : nome(nome), 
+    Aluno(const std::string& nome, int idade, std::string& matricula) : nome(nome),
     idade(idade), matricula(matricula) {}
 
-    // Método para exibir o nome do aluno
+    // MÃ©todo para exibir o nome do aluno
     void exibirNome() const {
         std::cout <<"Nome: " << nome << std::endl;
     }
 
-    // Incluindo mais 2 métodos
-    // Método para exibir a idade do aluno
+    // Incluindo mais 2 MÃ©todo
+    // MÃ©todo para exibir a idade do aluno
     void exibirIdade() const {
         std::cout <<"Idade: " << idade << std::endl;
     }
 
-    // Método para exibir a idade do aluno
+    // MÃ©todo para exibir a idade do aluno
     void exibirMatricula() const {
-        std::cout <<"Matrícula: " << matricula << std::endl;
+        std::cout <<"Matrï¿½cula: " << matricula << std::endl;
     }
 
     /*void exibirSala() const {
@@ -67,8 +67,8 @@ int main(int argc, char* argv[]) { // arcg = argument cout | argv = argument vec
 
     // Exibindo o nome do aluno
     aluno1.exibirNome();
-    aluno1.exibirIdade(); // Chamando método idade
-    aluno1.exibirMatricula(); // Chamando método matricula
+    aluno1.exibirIdade(); // Chamando mï¿½todo idade
+    aluno1.exibirMatricula(); // Chamando mï¿½todo matricula
 
     return 0;
 }

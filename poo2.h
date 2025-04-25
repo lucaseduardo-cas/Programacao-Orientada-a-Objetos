@@ -1,4 +1,4 @@
-// M…TODO CONSTRUTOR - CLASSE EM ARQUIVO EXTERNO .H
+// M√âTODO CONSTRUTOR - CLASSE EM ARQUIVO EXTERNO .H
 
 #ifndef POO2_H_INCLUDED
 #define POO2_H_INCLUDED
@@ -7,8 +7,8 @@ using namespace std;
 
 // Declarando uma classe
 class Aviao {
-public: // Elemento p˙blico
-    // DeclaraÁ„o de par„metros
+public: // Elemento p√∫blico
+    // Declara√ß√£o de par√¢metros
     int vel=0; // par. 1
     int velMax; // par. 2
     std::string tipo; // par. 3
@@ -20,7 +20,7 @@ private: // Elemento privado
 
 };
 
-// Construir mÈtodo Avi„o
+// Construir m√ê¬πtodo Avi√ê¬≥o
 Aviao::Aviao(int tp) { // 1=Jato, 2=Monomotor, 3=Planador
     if (tp==1) {
         velMax=800;
@@ -36,7 +36,7 @@ Aviao::Aviao(int tp) { // 1=Jato, 2=Monomotor, 3=Planador
 
 void Aviao::imprimir() {
     std::cout << "Tipo.............: " << tipo << std::endl;
-    std::cout << "Velocidade m·xima: " << velMax << std::endl;
+    std::cout << "Velocidade m√°xima: " << velMax << std::endl;
     std::cout << "Velocidade atual.: " << vel << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
 }

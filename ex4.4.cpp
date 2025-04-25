@@ -55,13 +55,13 @@ public:
     Mamifero(string nome, int idade, string tipoPelo) : Animal(nome, idade) {
         this->tipoPelo = tipoPelo;
         // cout << "Construtor chamado para Mamífero: " << nome << endl;
-        cout << "Construtor chamado para MamÃ­fero: " << getNome() << endl;
+        cout << "Construtor chamado para Mamífero: " << getNome() << endl;
     }
 
     // Destrutor
     ~Mamifero() {
         //cout << "Destrutor chamado para Mamífero: " << nome << endl;
-        cout << "Destrutor chamado para MamÃ­fero: " << getNome() << endl;
+        cout << "Destrutor chamado para Mamífero: " << getNome() << endl;
     }
 
     // Métodos Getters

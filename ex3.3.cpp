@@ -4,7 +4,7 @@ Definir uma classe para representar o cliente de um banco. Pelo menos 4
 atributos e 4 métodos.
 (banco), tem que ter o saldo e identificador do cliente e o identificador nÃ£o pode ser o nome do cliente.
 Não é para usar o "construtor" e também definir no mÃ­nimo 4 métodos para manipular os atributos de cada
-cliente. Ex.: 
+cliente. Ex.:
 mÃ©todo saque, tem que trabalhar saldo e subtrair e parâmetro que estou passando. Se estou criando um
 Depósito tem que somar.
 
@@ -28,7 +28,7 @@ consultarSaldo(): Exibe o saldo atual do cliente.
 exibirIdentificador(): Exibe o identificador Ãºnico do cliente.
 
 Restrição:
-Não utilize um construtor com parÃ¢metros para inicializar os atributos da classe diretamente na declaração. Você pode usar um método 
+Não utilize um construtor com parâmetros para inicializar os atributos da classe diretamente na declaração. Você pode usar um método
 separado para essa finalidade ou inicializar os atributos de outra forma.
 */
 

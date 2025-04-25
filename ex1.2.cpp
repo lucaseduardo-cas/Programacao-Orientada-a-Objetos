@@ -1,7 +1,7 @@
 /*
-1- Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 mÈtodos
-que v„o manipular os atributos. Ou seja, definir uma classe com 2 mÈtodos e 2 atributos. AlÈm disso, 
-construir um programa em linguagem C++ para implementar o tipo abstrato de dados (TAD). 
+1- Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 m–πtodos
+que v–≥o manipular os atributos. Ou seja, definir uma classe com 2 m–πtodos e 2 atributos. Al–πm disso,
+construir um programa em linguagem C++ para implementar o tipo abstrato de dados (TAD).
 */
 
 #include <iostream>
@@ -11,7 +11,7 @@ public:
     std::string SO;
     std::string processador;
 
-    Computador(const std::string& SO, const std::string& processador) : SO(SO), processador(processador) {} 
+    Computador(const std::string& SO, const std::string& processador) : SO(SO), processador(processador) {}
 
     void exibirSO () const {
         std::cout << "SO: " << SO << std::endl;
@@ -23,14 +23,14 @@ public:
 
 int main () {
 
-    // Declarando vari·veis
+    // Declarando vari–±veis
     std::string SO = "Windows 10";
     std::string processador = "Intel Core 15";
 
     // Criando de um objeto da classe computador chamado meuComputador
     Computador meuComputador(SO, processador);
 
-    // Chamando o mÈtodo p˙blico, funÁ„o exibirSO e exibirProcessador
+    // Chamando o m–πtodo p—äblico, fun–∑–≥o exibirSO e exibirProcessador
     meuComputador.exibirSO();
     meuComputador.exibirProcessador();
 

@@ -18,7 +18,7 @@ public:
         this->nome = nome;
         cout << "Construtor chamado para " << nome << endl;
     }
-    
+
     // Destrutor
     ~Pessoa() {
         cout << "Destrutor chamado para " << nome << endl;
