@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar no Windows (MinGW)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/output/${fileBasenameNoExtension}.exe"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Compila usando o GCC do Windows e envia para a pasta output"
+        },
+        {
+            "label": "Compilar e Executar no WSL (Linux)",
+            "type": "shell",
+            "command": "wsl",
+            "args": [
+                "bash",
+                "-c",
+                "mkdir -p output_linux && gcc -g \"${file}\" -o \"output_linux/$(basename ${file} .c)\" && ./output_linux/$(basename ${file} .c) && echo"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Compila no Linux (WSL) e envia para a pasta output_linux"
+        }
+    ]
+}
