@@ -5,7 +5,7 @@
 
 class Aluno {
 public:
-    std::string nome; // Atributo pÃºblico
+    std::string nome; // Atributo público
 };
 
 int main () {
@@ -16,10 +16,10 @@ int main () {
     Aluno aluno4;
 
     // Atribuindo nomes aos objetos
-    aluno1.nome = "JoÃ£o";
+    aluno1.nome = "João";
     aluno2.nome = "Maria";
     aluno3.nome = "Lucas";
-    aluno4.nome = "JosÃ©";
+    aluno4.nome = "José";
 
     // Exibindo os nomes dos alunos
     std::cout << "Nome do aluno 1: " << aluno1.nome << std::endl;

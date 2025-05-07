@@ -41,7 +41,7 @@ public:
 
     // MÃ©todo para exibir a idade do aluno
     void exibirMatricula() const {
-        std::cout <<"Matrï¿½cula: " << matricula << std::endl;
+        std::cout <<"Matrícula: " << matricula << std::endl;
     }
 
     /*void exibirSala() const {
