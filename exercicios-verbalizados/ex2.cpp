@@ -1,46 +1,57 @@
-/*
-Tarefa 25/02/2025: Construir um programa em linguagem C++ para implementar o tipo abstrato de dados (TAD). 
-*/
-
 #include <iostream>
 #include <string>
-using namespace std;
 
-// Definindo um Tipo Abstrato de Dados (TAD) chamado Produto
-class Produto {
+class Aluno {
 private:
-    string nome;
-    float preco;
+	std::string nome; //Atributo
+	int idade;
+	std::string curso;
+	int matricula;
 
 public:
-    // Método para definir os dados do produto
-    void definirDados(string n, float p) {
-        nome = n;
-        preco = p;
-    }
+	// Construtor
+	Aluno(const std::string& nome, int idade, const std::string& curso, int matricula)
+	: nome(nome), idade(idade), curso(curso), matricula(matricula) {}
 
-    // Método para mostrar os dados do produto
-    void mostrarDados() {
-        cout << "Produto: " << nome << endl;
-        cout << "Preço: R$ " << preco << endl;
-    }
+	// MÃ©todo para exibir o nome do aluno
+	void exibirDados() const {
+		std::cout << "nome: " << nome << std::endl;
+		std::cout << "Idade: " << idade << " anos" << std::endl;
+		std::cout << "Curso: " << curso << std::endl;
+		std::cout << "MatrÃ­cula: " << matricula << std::endl;
+	}
+
+	// MÃ©todo para alterar o curso do aluno
+	void alterarCurso(const std::string& novoCurso) {
+		curso = novoCurso;
+	}
 };
 
-int main() {
-    Produto p1;
-    string nome;
-    float preco;
+int main (int argc, char* argv[] ) {
+	if (argc != 5) {
+		std::cerr <<"Uso: " << argv[0] << " <nome> <idade> <curso> <matricula>" << std::endl;
+		return 1;
+	}
 
-    cout << "Digite o nome do produto: ";
-    getline(cin, nome);
+	// Captura os argumentos da linha de comando
+	std::string nome = argv[1];
+	int idade = std::stoi(argv[2]); // Converte string para inteiro
+	std::string curso = argv[3];
+	int matricula = std::stoi(argv[4]); // Converte string para inteiro
 
-    cout << "Digite o preço do produto: ";
-    cin >> preco;
+	// Criando um objeto Aluno
+	Aluno aluno1(nome, idade, curso, matricula);
 
-    p1.definirDados(nome, preco);
+	// Exibindo o nome do aluno
 
-    cout << "\nInformações do produto:" << endl;
-    p1.mostrarDados();
+	aluno1.exibirDados();
 
-    return 0;
+	// Alterando o curso do aluno
+	std::cout << "\nAlterando curso para 'Engenharia de Software'...\n";
+	aluno1.alterarCurso("Engenharia de Software");
+
+	// Exibindo os dados atualizados
+	aluno1.exibirDados();
+
+	return 0;
 }

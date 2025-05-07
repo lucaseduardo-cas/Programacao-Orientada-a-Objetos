@@ -10,6 +10,5 @@
     "C_Cpp.default.customConfigurationVariables": {
     
     },
-    "files.encoding": "iso88591",
-    "files.autoGuessEncoding": false
+    "files.encoding": "iso88591"
 }

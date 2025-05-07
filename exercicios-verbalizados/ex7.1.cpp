@@ -3,7 +3,7 @@ Tarefa POO - item 1 - Defina exemplos de associações com diferentes cardinaldiad
 Ou seja, 1:1, 1:N, N:N. Fazer o código em C++ e o diagrama de classes representando 
 suas associações.
 
-1:1 - Um CPF pertence a uma única Pessoa, e cada Pessoa tem um único CPF.
+1:1 ? Um CPF pertence a uma única Pessoa, e cada Pessoa tem um único CPF.
 
 Pessoa ---------1:1--------- CPF
 + nome                       + numero

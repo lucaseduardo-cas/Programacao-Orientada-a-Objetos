@@ -1,5 +1,5 @@
 /*
-1:N - Um Professor pode ter várias Turmas, mas cada Turma tem apenas um Professor.
+1:N ? Um Professor pode ter várias Turmas, mas cada Turma tem apenas um Professor.
 
 Professor ---------1:N--------- Turma
 + nome                           + nome

@@ -1,50 +1,44 @@
-/*
-Definir uma classe para representar o cliente de um banco. Pelo menos 4 atributos e 4 métodos.
-25/03/2025: (banco), tem que ter o saldo e identificador do cliente e o identificador não pode ser o nome do cliente. 
-Não é pra usar o "construtor" e também definir no mínimo 4 métodos para manipular os atributos de cada cliente. Ex.: 
-método saque, tem que trabalhar saldo e subtrair e parâmetro que estou passando. Se estou criando um depósito tem que somar.
-*/
 
 #include <iostream>
 #include <string>
 
 class Banco {
 private:
-	int identificador; // ID do cliente
+	int identificador; // ID do cliente (nÃ£o Ã© nome)
 	double saldo;
 
 public:
-	// Método para definir o identificador (já que não pode usar o construtor)
+	// MÃ©todo para definir o identificador (jÃ¡ que nÃ£o pode usar o construtor)
 	void definirIdentificador(int id) {
 		identificador = id;
 	}
 
-	// Método para definir o saldo inicial
+	// MÃ©todo para definir o saldo inicial
 	void definirSaldo(double valor) {
 		saldo = valor;
 	}
 
-	// Método para depositar dinheiro
+	// MÃ©todo para depositar dinheiro
 	void depositar(double valor) {
 		if (valor > 0) {
 			saldo += valor;
-			std::cout << "Depósito de R$ " << valor << " realizado com sucesso.\n";
+			std::cout << "DepÃ³sito de R$ " << valor << " realizado com sucesso.\n";
 		} else {
-			std::cout << "Valor inválido para depÃ³sito!\n";
+			std::cout << "Valor invÃ¡lido para depÃ³sito!\n";
 		}
 	}
 
-	// Método para sacar dinheiro
+	// MÃ©todo para sacar dinheiro
 	void sacar(double valor) {
 		if (valor > 0 && valor <= saldo) {
 			saldo -= valor;
 			std::cout << "Saque de R$ " << valor << " realizado com sucesso.\n";
 		} else {
-			std::cout << "Saldo insuficiente ou valor inválido!\n";
+			std::cout << "Saldo insuficiente ou valor invÃ¡lido!\n";
 		}
 	}
 
-	// Método para exibir saldo
+	// MÃ©todo para exibir saldo
 	void exibirSaldo() const {
 		std::cout << "Saldo atual: R$ " << saldo  << "\n";
 	}

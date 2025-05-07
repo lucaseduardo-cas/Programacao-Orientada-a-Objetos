@@ -1,34 +1,33 @@
 /*
-Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 mÈtodos que v√£o 
-manipular os atributos. Ou seja, definir uma classe com 2 mÈtodos e 2 atributos. AlÈm disso, construir um 
+Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 m√©todos que v√£o 
+manipular os atributos. Ou seja, definir uma classe com 2 m√©todos e 2 atributos. Al√©m disso, construir um 
 programa em linguagem C++ para implementar o tipo abstrato de dados (TAD). 
 */
 
 #include <iostream>  // Biblioteca para entrada e sa√≠da de dados
 #include <string>    // Biblioteca para manipular strings
-#include <math.h>
 
-// DefiniÁ„o da classe Pessoa
+// Defini√ß√£o da classe Pessoa
 class Pessoa {
 private:
     std::string nome; // Atributo nome
     int idade; // Atributo idade
 
 public:
-    // MÈtodo para definir os dados da pessoa
+    // M√©todo para definir os dados da pessoa
     void definirDados(std::string n, int i) {
         nome = n;
         idade = i;
     }
 
-    // MÈtodo para mostrar os dados da pessoa
+    // M√©todo para mostrar os dados da pessoa
     void mostrarDados() {
         std::cout << "Nome: " << nome << std::endl;
         std::cout << "Idade: " << idade << " anos" << std::endl;
     }
 };
 
-// FunÁ„o principal (main) do programa
+// Fun√ß√£o principal (main) do programa
 int main() {
     Pessoa p1;  // Criando um objeto da classe Pessoa
     std::string nome;

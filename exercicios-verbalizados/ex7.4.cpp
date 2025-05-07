@@ -1,11 +1,5 @@
 /*
 Item 2. Da mesma forma que o item 1, explore o conceito de herança múltipla.
-
-      Pessoa        Trabalhador       Estudante
-         \              |               /
-          \             |              /
-           \_________Estagiario________/
-
 */
 
 #include <iostream>

@@ -1,16 +1,16 @@
 /*
-Tarefa 01/04/2025: Escreva um programa com duas classes que apresentem um relacionamento por herança. O programa deverão apresentar, 
-construir, destruir, getter, setter. No exemplo, deverão ser explorados os modificadores de tipos para atributos.
+Escreva um programa com duas classes que apresentem um relacionamento por heranÃ§a. O programa deverÃ¡ apresentar, 
+construir, destruir, getter, setter. No exemplo, deverÃ£o ser explorados os modificadores de tipoÂ paraÂ atributos.
 
-protected	- Dentro da classe e das classes filhas	(Permitir herança com controle)
-private	    - Somente dentro da própria classe (Você quer esconder os dados de fora)
+protected	- Dentro da classe e das classes filhas	(Permitir heranÃ§a com controle)
+private	    - Somente dentro da prÃ³pria classe (VocÃª quer esconder os dados de fora)
 public	    - Livre acesso de fora da classe (Quando precisa ser acessado externamente)
 */
 
 #include <iostream>
 using namespace std;
 
-// Classe genérica Animal
+// Classe genÃ©rica Animal
 class Animal {
 private:
     string nome;
@@ -29,16 +29,16 @@ public:
         cout << "Destrutor chamado para Animal: " << nome << endl;
     }
 
-    // Método Getters
+    // MÃ©todos Getters
     string getNome() const { return nome; }
     int getIdade() const { return idade; }
 
-    // Método Setters
+    // MÃ©todos Setters
     void setNome(string novoNome) { nome = novoNome; }
     void setIdade(int novaIdade) { idade = novaIdade; }
 };
 
-// Classe especializada Mamífero
+// Classe especializada MamÃ­fero
 class Mamifero : public Animal {
 private:
     string tipoPelo;
@@ -47,20 +47,20 @@ public:
     // Construtor
     Mamifero(string nome, int idade, string tipoPelo) : Animal(nome, idade) {
         this->tipoPelo = tipoPelo;
-        // cout << "Construtor chamado para Mamífero: " << nome << endl;
+        // cout << "Construtor chamado para MamÃ­fero: " << nome << endl;
         cout << "Construtor chamado para MamÃ­fero: " << getNome() << endl;
     }
 
     // Destrutor
     ~Mamifero() {
-        //cout << "Destrutor chamado para Mamífero: " << nome << endl;
+        //cout << "Destrutor chamado para MamÃ­fero: " << nome << endl;
         cout << "Destrutor chamado para MamÃ­fero: " << getNome() << endl;
     }
 
-    // Métodos Getters
+    // MÃ©todos Getters
     string getTipoPelo() const { return tipoPelo; }
 
-    // Métodos Setters
+    // MÃ©todos Setters
     void setTipoPelo(string novoTipoPelo) { tipoPelo = novoTipoPelo; }
 
     void exibirDados() {
@@ -69,7 +69,7 @@ public:
     }
 };
 
-// Classe especializada Reptil
+// Classe especializada RÃ©ptil
 class Reptil : public Animal {
 private:
     bool temEscamas;
@@ -78,30 +78,30 @@ public:
     // Construtor
     Reptil(string nome, int idade, bool temEscamas) : Animal(nome, idade) {
         this->temEscamas = temEscamas;
-        //cout << "Construtor chamado para Reptil: " << nome << endl;
+        //cout << "Construtor chamado para RÃ©ptil: " << nome << endl;
         cout << "Construtor chamado para RÃ©ptil: " << getNome() << endl;
     }
 
     // Destrutor
     ~Reptil() {
-        //cout << "Destrutor chamado para Reptil: " << nome << endl;
+        //cout << "Destrutor chamado para RÃ©ptil: " << nome << endl;
         cout << "Destrutor chamado para RÃ©ptil: " << getNome() << endl;
     }
 
-    // Métodos Getters
+    // MÃ©todos Getters
     bool getTemEscamas() const { return temEscamas; }
 
-    // Métodos Setters
+    // MÃ©todos Setters
     void setTemEscamas(bool novoTemEscamas) { temEscamas = novoTemEscamas; }
 
     void exibirDados() {
-        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tem escamas: " << (temEscamas ? "Sim" : "Não") << endl;
-        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tem escamas: " << (temEscamas ? "Sim" : "Não") << endl;
+        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tem escamas: " << (temEscamas ? "Sim" : "NÃ£o") << endl;
+        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tem escamas: " << (temEscamas ? "Sim" : "NÃ£o") << endl;
     }
 };
 
 int main() {
-    cout << "Criando um Mamífero e um Réptil...\n";
+    cout << "Criando um MamÃ­fero e um RÃ©ptil...\n";
     Mamifero cachorro("Rex", 5, "Curto");
     Reptil cobra("Naja", 3, true);
 

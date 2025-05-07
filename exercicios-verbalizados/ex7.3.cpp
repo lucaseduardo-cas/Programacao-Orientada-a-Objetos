@@ -1,5 +1,5 @@
 /*
-N:N - Um Aluno pode estar em várias Disciplinas, e uma Disciplina pode ter vários Alunos.
+N:N ? Um Aluno pode estar em várias Disciplinas, e uma Disciplina pode ter vários Alunos.
 
 Aluno ---------N:N--------- Disciplina
 + nome                           + nome
