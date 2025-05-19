@@ -94,13 +94,13 @@ public:
 
 // Função principal
 int main() {
-    string tipo = "Carro";  // Altere para "Moto" para testar a outra condição
+    string tipo = "Moto";  // Altere para "Moto" para testar a outra condição
 
     if (tipo == "Carro") {
         Carro car("12345", "Honda", "Civic", "Gasolina", 130);
         car.exibirCarro();
     } else if (tipo == "Moto") {
-        Motocicleta mot("Vermelha", "Yamaha", "Fazer", "Gasolina", 250);
+        Motocicleta mot("Vermelha", "Yamaha", "Fazer", "Gasolina", 21);
         mot.exibirMotocicleta();
     }
 
