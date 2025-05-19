@@ -5,7 +5,7 @@ using namespace std;
 // Declarando uma classe
 class Aviao {
 public: // Elemento público
-    // Declaração de parãmetros
+    // Declaração de parâmetros
     int vel=0; // par. 1
     int velMax; // par. 2
     string tipo; // par. 3

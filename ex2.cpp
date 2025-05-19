@@ -16,10 +16,10 @@ int main () {
     Aluno aluno4;
 
     // Atribuindo nomes aos objetos
-    aluno1.nome = "João";
+    aluno1.nome = "Joao";
     aluno2.nome = "Maria";
     aluno3.nome = "Lucas";
-    aluno4.nome = "José";
+    aluno4.nome = "Jose";
 
     // Exibindo os nomes dos alunos
     std::cout << "Nome do aluno 1: " << aluno1.nome << std::endl;
