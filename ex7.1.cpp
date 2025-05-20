@@ -1,4 +1,5 @@
 /*
+Aula 29/04/2024
 Exercício em sala com IA. Prompt:
 Gere um código simples em c++ usando uma classe calcular e na função main somando dois números
 
