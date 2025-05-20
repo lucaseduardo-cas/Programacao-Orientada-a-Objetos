@@ -11,9 +11,9 @@ gdb info variables
 
 Corrigir a prova e colocar para rodar junto com o gdb
 
-1) Utilizando a linguagem de programação c++, faça a implementação do diagrama de classes, apresentado na figura 1. JUSTIFIQUE SUA RESPOTA
+1) Utilizando a linguagem de programaÃ§Ã£o c++, faÃ§a a implementaÃ§Ã£o do diagrama de classes, apresentado na figura 1. JUSTIFIQUE SUA RESPOTA
 
-Figura 1 - Representação:
+Figura 1 - RepresentaÃ§Ã£o:
 
        PedidoOnline         ----------->           Pedido            1 ------------1       Cliente
 - metodoPagamento: String                 - numero: int                              - nome: String
@@ -59,7 +59,7 @@ public:
         : numero(numero), valor(valor), cliente(cliente) {}
 
     void exibirDadosPedidos() {
-        cout << "Pedido Nº: " << numero << ", Valor: R$" << valor << endl;
+        cout << "Pedido NÂº: " << numero << ", Valor: R$" << valor << endl;
         cliente.exibirDadosCliente();
     }
 };
@@ -74,13 +74,13 @@ public:
 
     void exibirPedidoCliente() {
         exibirDadosPedidos();
-        cout << "Método de pagamento: " << metodoPagamento << endl;
+        cout << "MÃ©todo de pagamento: " << metodoPagamento << endl;
     }
 };
 
 int main() {
     Cliente cliente("Joao", "joao@gmail.com");
-    PedidoOnline pedido(123, 50.0, cliente, "Cartão de Crédito");
+    PedidoOnline pedido(123, 50.0, cliente, "CartÃ£o de CrÃ©dito");
 
     pedido.exibirPedidoCliente();
 

@@ -1,17 +1,17 @@
 /*
 Aula 29/04/2025
-1. O que é sobrecarga de método (overloading)?
-É quando dois ou mais métodos têm o mesmo nome, mas assinaturas diferentes (parâmetros diferentes) dentro da mesma classe ou classe derivada.
+1. O que Ã© sobrecarga de mÃ©todo (overloading)?
+Ã‰ quando dois ou mais mÃ©todos tÃªm o mesmo nome, mas assinaturas diferentes (parÃ¢metros diferentes) dentro da mesma classe ou classe derivada.
 
 class Exemplo {
 public:
-    void mostrar();              // Método 1
-    void mostrar(string texto); // Método 2 (sobrecarga)
+    void mostrar();              // MÃ©todo 1
+    void mostrar(string texto); // MÃ©todo 2 (sobrecarga)
 };
 
 
-2. E herança?
-Herança é quando uma classe filha herda atributos e métodos de uma classe pai:
+2. E heranÃ§a?
+HeranÃ§a Ã© quando uma classe filha herda atributos e mÃ©todos de uma classe pai:
 class Pai {
 public:
     void falar() { cout << "Pai falando\n"; }
@@ -23,14 +23,14 @@ public:
 };
 
 
-3. A pegadinha: quando há herança + sobrecarga
-No exemplo acima, pode parecer que o objeto da classe Filho tem acesso aos dois métodos falar() (com e sem parâmetro). Mas não tem!
+3. A pegadinha: quando hÃ¡ heranÃ§a + sobrecarga
+No exemplo acima, pode parecer que o objeto da classe Filho tem acesso aos dois mÃ©todos falar() (com e sem parÃ¢metro). Mas nÃ£o tem!
 
-Por quê?
-Porque em C++, um método na classe filha com o mesmo nome de um método da classe pai "esconde" todos os métodos da classe pai com o mesmo nome ? mesmo que a assinatura seja diferente.
+Por quÃª?
+Porque em C++, um mÃ©todo na classe filha com o mesmo nome de um mÃ©todo da classe pai "esconde" todos os mÃ©todos da classe pai com o mesmo nome ? mesmo que a assinatura seja diferente.
 
 Como resolver?
-Use o comando using para ?herdar visivelmente? os métodos da classe base:
+Use o comando using para ?herdar visivelmente? os mÃ©todos da classe base:
 */
 
 #include <iostream>
@@ -43,12 +43,12 @@ public:
 
 class Filho : public Pai {
 public:
-    using Pai::falar; // Reexpondo o método da classe Pai (Se tirar não funciona)
+    using Pai::falar; // Reexpondo o mÃ©todo da classe Pai (Se tirar nÃ£o funciona)
     void falar(string msg) { cout << "Filho diz: " << msg << endl; }
 };
 
 int main() {
     Filho f;
-    f.falar(); // ERRO: método 'falar()' sem argumento está ocultado!
+    f.falar(); // ERRO: mÃ©todo 'falar()' sem argumento estÃ¡ ocultado!
     f.falar("Oi");
 }

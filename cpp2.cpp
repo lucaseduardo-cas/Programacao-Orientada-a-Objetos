@@ -31,7 +31,7 @@ int main () {
     cout << endl;
 
     // Entrada de dados
-    cout << "Digite o número de vidas: ";
+    cout << "Digite o nÃºmero de vidas: ";
     cin >> vidas; // Entrada de dados;
     cout << "Digite uma letra: ";
     cin >> letra;

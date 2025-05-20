@@ -1,4 +1,4 @@
-﻿/*
+Ã¯Â»Â¿/*
 Aula 13/05/2025
 
 g++ -g -o poo4 poo4.cpp
@@ -9,7 +9,7 @@ next
 print (variavel)
 gdb info variables
 
-Trazer um exemplo do uso de sobrecarga de m�todo de fun��o virtual (ou de m�todo virtual), ou seja, de sobrescrito.
+Trazer um exemplo do uso de sobrecarga de método de função virtual (ou de método virtual), ou seja, de sobrescrito.
 */
 
 #include <iostream>
@@ -18,12 +18,12 @@ using namespace std;
 // Classe base
 class Animal {
 public:
-    // Fun��o virtual ? pode ser sobrescrita
+    // Função virtual — pode ser sobrescrita
     virtual void som() {
         cout << "Animal faz som genérico" << endl;
     }
 
-    // Fun��o com sobrecarga ? par�metros diferentes
+    // Função com sobrecarga — parâmetros diferentes
     void som(string nome) {
         cout << nome << " faz um som indefinido" << endl;
     }
@@ -32,12 +32,12 @@ public:
 // Classe derivada
 class Cachorro : public Animal {
 public:
-    // Sobrescreve a fun��o virtual
+    // Sobrescreve a função virtual
     void som() override {
         cout << "Cachorro: Au Au!" << endl;
     }
 
-    // Sobrecarga na classe derivada tamb�m
+    // Sobrecarga na classe derivada também
     void som(string nome) {
         cout << nome << " está latindo!" << endl;
     }
@@ -47,16 +47,16 @@ int main() {
     // Polimorfismo: ponteiro da base aponta para objeto da derivada
     Animal* a = new Cachorro();
 
-    // Vai chamar o m�todo da classe derivada por ser virtual
-    a->som(); // Sa�da: Cachorro: Au Au!
+    // Vai chamar o método da classe derivada por ser virtual
+    a->som(); // Saída: Cachorro: Au Au!
 
-    // Chama a vers�o com argumento string ? n�o � virtual!
-    // E como estamos usando ponteiro de Animal, chama o m�todo da classe base
-    a->som("Rex"); // Sa�da: Rex faz um som indefinido
+    // Chama a versão com argumento string — não é virtual!
+    // E como estamos usando ponteiro de Animal, chama o método da classe base
+    a->som("Rex"); // Saída: Rex faz um som indefinido
 
     // Para chamar a sobrecarga da derivada, precisa do tipo derivado
     Cachorro c;
-    c.som("Bolt"); // Sa�da: Bolt est� latindo!
+    c.som("Bolt"); // Saída: Bolt está latindo!
 
     delete a;
     return 0;

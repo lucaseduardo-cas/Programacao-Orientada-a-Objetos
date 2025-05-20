@@ -8,7 +8,7 @@ print nome
 continue
 
 3- Tarefa 11/03/2025: Tarefa POO - Modificar o exemplo aluno3.cpp
-(Classrom), incluindo mais 3 atributos e dois métdoso.
+(Classrom), incluindo mais 3 atributos e dois mÃ©tdoso.
 */
 
 #include <iostream>
@@ -41,7 +41,7 @@ public:
 
     // Método para exibir a idade do aluno
     void exibirMatricula() const {
-        std::cout <<"Matr�cula: " << matricula << std::endl;
+        std::cout <<"Matrícula: " << matricula << std::endl;
     }
 
     /*void exibirSala() const {
@@ -67,8 +67,8 @@ int main(int argc, char* argv[]) { // arcg = argument cout | argv = argument vec
 
     // Exibindo o nome do aluno
     aluno1.exibirNome();
-    aluno1.exibirIdade(); // Chamando m�todo idade
-    aluno1.exibirMatricula(); // Chamando m�todo matricula
+    aluno1.exibirIdade(); // Chamando mï¿½todo idade
+    aluno1.exibirMatricula(); // Chamando mï¿½todo matricula
 
     return 0;
 }

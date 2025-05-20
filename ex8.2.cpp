@@ -11,22 +11,22 @@ gdb info variables
 
 Corrigir a prova e colocar para rodar junto com o gdb
 
-2) Suponha que num sistema de informações para registros de vevículos automotores, o objeto Veiculo não possa existir sem o objeto Motor. Ainda, nesse recorte do modelo, existem o objeto Motocicleta e o objeto Carro. Construa um diagrama de classes, definindo atributos, métodos e relacionamentos para as classes, cujos objetos supracitados foram instânciados. JUSTIFIQUE SUA RESPOSTA! Em seguida, utilizando a linguagem de programação C++, mostre o programa. JUSTIFIQUE SUA RESPOSTA!
+2) Suponha que num sistema de informaÃ§Ãµes para registros de vevÃ­culos automotores, o objeto Veiculo nÃ£o possa existir sem o objeto Motor. Ainda, nesse recorte do modelo, existem o objeto Motocicleta e o objeto Carro. Construa um diagrama de classes, definindo atributos, mÃ©todos e relacionamentos para as classes, cujos objetos supracitados foram instÃ¢nciados. JUSTIFIQUE SUA RESPOSTA! Em seguida, utilizando a linguagem de programaÃ§Ã£o C++, mostre o programa. JUSTIFIQUE SUA RESPOSTA!
 
 Justificativa:
 
-Justificativa código:
+Justificativa cÃ³digo:
 - Veiculo, motor, carro e motocicleta se tornam classes;
-- Veiculo tem um motor obrigatório e motor tem um veículo obrigatório;
-- Carro e Motocicleta herdam veículo;
+- Veiculo tem um motor obrigatÃ³rio e motor tem um veÃ­culo obrigatÃ³rio;
+- Carro e Motocicleta herdam veÃ­culo;
 - exibirVeiculo mostra dados do veiculo;
 
 Justificativa diagrama de classes:
-- Veículo é a classe primária;
-- Carro e motocicleta são classes secundárias que herdam da classe veículo.
-- Motor é essencial e estará como atributo em veículo
+- VeÃ­culo Ã© a classe primÃ¡ria;
+- Carro e motocicleta sÃ£o classes secundÃ¡rias que herdam da classe veÃ­culo.
+- Motor Ã© essencial e estarÃ¡ como atributo em veÃ­culo
 
-Representação diagrama de classes:
+RepresentaÃ§Ã£o diagrama de classes:
 Veiculo (+ motor:Motor, + marca:string, + modelo), exibir() void; 1 ----- 1 Motor (+ tipo: string, + potencia int), exibir() void;
 Carro (- chasi), exibir(void) ------> Veiculo
 Motocicleta (+ cor), exibir(void) ------> Veiculo
@@ -45,7 +45,7 @@ public:
     Motor(string tipo, int potencia) : tipo(tipo), potencia(potencia) {}
 
     void exibir() {
-        cout << "Tipo: " << tipo << ", Potência: " << potencia << " cv" << endl;
+        cout << "Tipo: " << tipo << ", PotÃªncia: " << potencia << " cv" << endl;
     }
 };
 
@@ -94,9 +94,9 @@ public:
     }
 };
 
-// Função principal
+// FunÃ§Ã£o principal
 int main() {
-    string tipo = "Moto";  // Altere para "Moto" para testar a outra condição
+    string tipo = "Moto";  // Altere para "Moto" para testar a outra condiÃ§Ã£o
 
     if (tipo == "Carro") {
         Carro car("12345", "Honda", "Civic", "Gasolina", 130);
@@ -113,18 +113,18 @@ int main() {
 
 /*
 /*
-Código da prova:
+CÃ³digo da prova:
 
-Justificativa código:
+Justificativa cÃ³digo:
 - Veiculo, motor, carro e motocicleta se tornam classes;
-- Veiculo tem um motor obrigatório e motor tem um veículo obrigatório;
-- Carro e Motocicleta herdam veículo;
+- Veiculo tem um motor obrigatÃ³rio e motor tem um veÃ­culo obrigatÃ³rio;
+- Carro e Motocicleta herdam veÃ­culo;
 - exibirVeiculo mostra dados do veiculo;
 
 Justificativa diagrama de classes:
-- Veículo é a classe primária;
-- Carro e motocicleta são classes secundárias que herdam da classe veículo.
-- Motor é essencial e estará como atributo em veículo
+- VeÃ­culo Ã© a classe primÃ¡ria;
+- Carro e motocicleta sÃ£o classes secundÃ¡rias que herdam da classe veÃ­culo.
+- Motor Ã© essencial e estarÃ¡ como atributo em veÃ­culo
 
 Veiculo
 */

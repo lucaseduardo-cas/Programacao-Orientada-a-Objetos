@@ -16,15 +16,15 @@ private:
     string titulo;
 
 public:
-    // Construtor é chamado automaticamente quando o objeto é criado
+    // Construtor Ã© chamado automaticamente quando o objeto Ã© criado
     Livro (string nome) {
         titulo = nome;
-        cout << "Livro criado com o título: " << titulo << endl;
+        cout << "Livro criado com o tÃ­tulo: " << titulo << endl;
     }
 };
 
 int main () {
-    // Criando o objeto e já passando o título
+    // Criando o objeto e jÃ¡ passando o tÃ­tulo
     Livro l("Aventuras em C++");
 
     return 0;

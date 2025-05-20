@@ -1,6 +1,6 @@
 /*
 Tarefa 08/04/2025
-N:N - Um Aluno pode estar em v·rias Disciplinas, e uma Disciplina pode ter v·rios Alunos.
+N:N - Um Aluno pode estar em v√°rias Disciplinas, e uma Disciplina pode ter v√°rios Alunos.
 
 Aluno ---------N:N--------- Disciplina
 + nome                           + nome
@@ -60,7 +60,7 @@ void Aluno::listarDisciplinas() {
 
 int main() {
     Aluno a1("Lucas"), a2("Fernanda");
-    Disciplina d1("POO"), d2("Matem·tica");
+    Disciplina d1("POO"), d2("Matem√°tica");
 
     a1.adicionarDisciplina(&d1);
     a1.adicionarDisciplina(&d2);

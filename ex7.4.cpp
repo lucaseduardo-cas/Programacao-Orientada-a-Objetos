@@ -1,17 +1,17 @@
 /*
 Aula 29/04/2025
 
-O que são funções virtuais?
-Em C++, uma função virtual permite que o comportamento de um método seja sobrescrito por uma classe derivada e que, ao usar ponteiros ou referências da classe base, o método da classe derivada seja chamado corretamente.
+O que sÃ£o funÃ§Ãµes virtuais?
+Em C++, uma funÃ§Ã£o virtual permite que o comportamento de um mÃ©todo seja sobrescrito por uma classe derivada e que, ao usar ponteiros ou referÃªncias da classe base, o mÃ©todo da classe derivada seja chamado corretamente.
 
-Ou seja, é essencial para o polimorfismo em tempo de execução.
+Ou seja, Ã© essencial para o polimorfismo em tempo de execuÃ§Ã£o.
 
-* Sintaxe básica:
+* Sintaxe bÃ¡sica:
 
 class Animal {
 public:
     virtual void fazerSom() {
-        std::cout << "Animal faz som genérico" << std::endl;
+        std::cout << "Animal faz som genÃ©rico" << std::endl;
     }
 };
 
@@ -22,23 +22,23 @@ public:
     }
 };
 
-* Com ou sem função virtual?
+* Com ou sem funÃ§Ã£o virtual?
 
 Animal* a = new Cachorro();
-a->fazerSom();  // Vai chamar "Cachorro late" SÓ SE a função for virtual
+a->fazerSom();  // Vai chamar "Cachorro late" sÃ£o SE a funÃ§Ã£o for virtual
 
-Se a função não for virtual, o C++ chama a versão da classe base (Animal), mesmo que o objeto real seja um Cachorro.
+Se a funÃ§Ã£o nÃ£o for virtual, o C++ chama a versÃƒÂ£o da classe base (Animal), mesmo que o objeto real seja um Cachorro.
 
 Por que usar?
-Para permitir sobrescrita real em tempo de execução
+Para permitir sobrescrita real em tempo de execuÃ§Ã£o
 
-Para escrever código genérico com comportamento específico
+Para escrever cÃ³digo genÃ©rico com comportamento especÃ­fico
 
-Para aplicar polimorfismo verdadeiro com ponteiros/referências
+Para aplicar polimorfismo verdadeiro com ponteiros/referÃªncias
 
 * Dica visual:
 Sem virtual	                                Com virtual
-Chama método da classe base	        Chama método da classe derivada
+Chama mÃ©todo da classe base	        Chama mÃ©todo da classe derivada
 Sem polimorfismo	                Polimorfismo ativado
 */
 
@@ -48,7 +48,7 @@ using namespace std;
 class Animal {
 public:
     virtual void som() {
-        cout << "Som de animal genérico" << endl;
+        cout << "Som de animal genÃ©rico" << endl;
     }
 };
 
@@ -61,6 +61,6 @@ public:
 
 int main() {
     Animal* a = new Gato();
-    a->som();  // Saída: Miau!
+    a->som();  // SaÃƒÂ­da: Miau!
     delete a;
 }

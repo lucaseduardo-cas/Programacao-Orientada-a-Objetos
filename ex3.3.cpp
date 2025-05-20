@@ -1,34 +1,34 @@
 /*
 Tarefa 18/03/2025
 Definir uma classe para representar o cliente de um banco. Pelo menos 4
-atributos e 4 m�todos.
-(banco), tem que ter o saldo e identificador do cliente e o identificador não pode ser o nome do cliente.
-N�o � para usar o "construtor" e tamb�m definir no mínimo 4 m�todos para manipular os atributos de cada
+atributos e 4 métodos.
+(banco), tem que ter o saldo e identificador do cliente e o identificador nÃ£o pode ser o nome do cliente.
+Não é para usar o "construtor" e também definir no mÃ­nimo 4 métodos para manipular os atributos de cada
 cliente. Ex.:
-método saque, tem que trabalhar saldo e subtrair e par�metro que estou passando. Se estou criando um
-Dep�sito tem que somar.
+mÃ©todo saque, tem que trabalhar saldo e subtrair e parâmetro que estou passando. Se estou criando um
+Depósito tem que somar.
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 Tarefa: Classe ClienteBanco
 
 Definir uma classe em C++ chamada ClienteBanco para representar um cliente de um banco. Esta classe deve possuir:
 
-- Atributos (m�nimo 4):
+- Atributos (mínimo 4):
 Saldo: Representa o saldo da conta do cliente.
-Identificador do Cliente: Um valor único para identificar o cliente. Importante: Este identificador não pode ser o mesmo que o nome do cliente.
+Identificador do Cliente: Um valor Ãºnico para identificar o cliente. Importante: Este identificador nÃ£o pode ser o mesmo que o nome do cliente.
 Nome do Cliente: O nome completo do cliente.
-Número da Conta: O número da conta bancária do cliente.
+NÃºmero da Conta: O nÃºmero da conta bancÃ¡ria do cliente.
 
-- M�todos (m�nimo 4 para manipular os atributos):
-depositar(double valor): Recebe um valor como par�metro e adiciona esse valor ao saldo do cliente. Valide se o valor do dep�sito � positivo.
-sacar(double valor): Recebe um valor como par�metro e subtrai esse valor do saldo do cliente. Realize as seguintes valida��es:
+- Métodos (mínimo 4 para manipular os atributos):
+depositar(double valor): Recebe um valor como parâmetro e adiciona esse valor ao saldo do cliente. Valide se o valor do depósito é positivo.
+sacar(double valor): Recebe um valor como parâmetro e subtrai esse valor do saldo do cliente. Realize as seguintes validações:
 O valor do saque deve ser positivo.
 Deve haver saldo suficiente para realizar o saque.
 consultarSaldo(): Exibe o saldo atual do cliente.
-exibirIdentificador(): Exibe o identificador único do cliente.
+exibirIdentificador(): Exibe o identificador Ãºnico do cliente.
 
-Restri��o:
-N�o utilize um construtor com par�metros para inicializar os atributos da classe diretamente na declara��o. Voc� pode usar um m�todo
+Restrição:
+Não utilize um construtor com parâmetros para inicializar os atributos da classe diretamente na declaração. Você pode usar um método
 separado para essa finalidade ou inicializar os atributos de outra forma.
 */
 
@@ -47,7 +47,7 @@ public:
             std::cout <<"Valor negativo! Deposite um valor maior do que 0: " << std::endl;
         } else {
             saldo += valor;
-            std::cout <<"Dep�sito de R$" << valor << " realizado com sucesso!" << std::endl;
+            std::cout <<"Depósito de R$" << valor << " realizado com sucesso!" << std::endl;
         }
     }
 

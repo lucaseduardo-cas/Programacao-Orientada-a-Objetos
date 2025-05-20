@@ -1,6 +1,6 @@
 /*
-1- Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 mйtodos
-que vгo manipular os atributos. Ou seja, definir uma classe com 2 mйtodos e 2 atributos. Alйm disso,
+1- Tarefa 25/02/2025: Construa um tipo abstrato de dados que contenha pelo menos 2 atributos e 2 métodos
+que vгo manipular os atributos. Ou seja, definir uma classe com 2 métodos e 2 atributos. Alйm disso,
 construir um programa em linguagem C++ para implementar o tipo abstrato de dados (TAD).
 */
 

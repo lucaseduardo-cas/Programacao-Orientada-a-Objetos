@@ -1,23 +1,24 @@
+
 /*
 Tarefa 23/03/2025
-1- Estudar exemplo (verificar a escrita e execuÁ„o - compilar, por pra rodar e depuraÁ„o, verificar o que est· acontecendo com os 
-atributos e mÈtodos do programa).
+1- Estudar exemplo (verificar a escrita e execu√ß√£o - compilar, por pra rodar e depura√ß√£o, verificar o que est√° acontecendo com os
+atributos e m√©todos do programa).
 
-2- Criar uma classe genÈrica e duas classes especializadas, sendo uma mais genÈrica chamada "animal" e depois criar classes mais 
-especÌficas, por exemplo: "mamÌfero", "rÈptil" cujo relacionamento da classe genÈrica ser· por heranÁa simples. Definir pelo menos 
-2 atributos para cada uma das classes. Definir mÈtodo construtor e destrutor para cada uma dessas classes e pelo menos mais dois 
-mÈtodos de get e set para cada uma das classes. 
-Avaliar o efeito da execuÁ„o quando modificar os tipos de acesso entre os atributos de classe genÈrica e a classe especializada 
-(definir tudo como p˙blico, depois protegido e depois como privado. Rastrear com o GDB para ver o que est· acontecendo†l·).
+2- Criar uma classe gen√©rica e duas classes especializadas, sendo uma mais gen√©rica chamada "animal" e depois criar classes mais
+espec√≠ficas, por exemplo: "mam√≠fero", "r√©ptil" cujo relacionamento da classe gen√©rica ser√° por heran√ßa simples. Definir pelo menos
+2 atributos para cada uma das classes. Definir m√©todo construtor e destrutor para cada uma dessas classes e pelo menos mais dois
+m√©todos de get e set para cada uma das classes.
+Avaliar o efeito da execu√ß√£o quando modificar os tipos de acesso entre os atributos de classe gen√©rica e a classe especializada
+(definir tudo como p√∫blico, depois protegido e depois como privado. Rastrear com o GDB para ver o que est√° acontecendo l√°).
 
 - Trabalhar Geter e Setter
-- Trabalhar HeranÁa
+- Trabalhar Heran√ßa
 */
 
 #include <iostream>
 using namespace std;
 
-// Classe genÈrica Animal
+// Classe gen√©rica Animal
 class Animal {
 private:
     string nome;
@@ -36,16 +37,16 @@ public:
         cout << "Destrutor chamado para Animal: " << nome << endl;
     }
 
-    // MÈtodo Getters
+    // M√©todo Getters
     string getNome() const { return nome; }
     int getIdade() const { return idade; }
 
-    // MÈtodo Setters
+    // M√©todo Setters
     void setNome(string novoNome) { nome = novoNome; }
     void setIdade(int novaIdade) { idade = novaIdade; }
 };
 
-// Classe especializada MamÌfero
+// Classe especializada Mam√≠fero
 class Mamifero : public Animal {
 private:
     string tipoPelo;
@@ -54,20 +55,20 @@ public:
     // Construtor
     Mamifero(string nome, int idade, string tipoPelo) : Animal(nome, idade) {
         this->tipoPelo = tipoPelo;
-        // cout << "Construtor chamado para MamÌfero: " << nome << endl;
-        cout << "Construtor chamado para MamÌfero: " << getNome() << endl;
+        // cout << "Construtor chamado para Mam√≠fero: " << nome << endl;
+        cout << "Construtor chamado para Mam√≠fero: " << getNome() << endl;
     }
 
     // Destrutor
     ~Mamifero() {
-        //cout << "Destrutor chamado para MamÌfero: " << nome << endl;
-        cout << "Destrutor chamado para MamÌfero: " << getNome() << endl;
+        //cout << "Destrutor chamado para Mam√≠fero: " << nome << endl;
+        cout << "Destrutor chamado para Mam√≠fero: " << getNome() << endl;
     }
 
-    // MÈtodos Getters
+    // M√©todos Getters
     string getTipoPelo() const { return tipoPelo; }
 
-    // MÈtodos Setters
+    // M√©todos Setters
     void setTipoPelo(string novoTipoPelo) { tipoPelo = novoTipoPelo; }
 
     void exibirDados() {
@@ -95,20 +96,20 @@ public:
         cout << "Destrutor chamado para R√©ptil: " << getNome() << endl;
     }
 
-    // MÈtodos Getters
+    // M√©todos Getters
     bool getTemEscamas() const { return temEscamas; }
 
-    // MÈtodos Setters
+    // M√©todos Setters
     void setTemEscamas(bool novoTemEscamas) { temEscamas = novoTemEscamas; }
 
     void exibirDados() {
-        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tem escamas: " << (temEscamas ? "Sim" : "N„o") << endl;
-        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tem escamas: " << (temEscamas ? "Sim" : "N„o") << endl;
+        //cout << "Nome: " << nome << ", Idade: " << idade << ", Tem escamas: " << (temEscamas ? "Sim" : "N√£o") << endl;
+        cout << "Nome: " << getNome() << ", Idade: " << getIdade() << ", Tem escamas: " << (temEscamas ? "Sim" : "N√£o") << endl;
     }
 };
 
 int main() {
-    cout << "Criando um MamÌfero e um RÈptil...\n";
+    cout << "Criando um Mam√≠fero e um R√©ptil...\n";
     Mamifero cachorro("Rex", 5, "Curto");
     Reptil cobra("Naja", 3, true);
 

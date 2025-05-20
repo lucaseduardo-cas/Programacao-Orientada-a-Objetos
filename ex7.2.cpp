@@ -1,18 +1,18 @@
 /*
 Aula 29/04/2024
-Que tipo de problema a sobrecarga de método é capaz de resolver com base nesse exemplo que você gerou? ex7.2.cpp
+Que tipo de problema a sobrecarga de mÃ©todo Ã© capaz de resolver com base nesse exemplo que vocÃª gerou? ex7.2.cpp
 
-A sobrecarga de método em C++ permite que você tenha vários métodos com o mesmo nome dentro da mesma classe, mas
-com parâmetros diferentes (tipo, quantidade ou ordem). Com base no exemplo da classe Calcular, ela pode resolver
-o problema de flexibilidade no uso da função somar, dependendo do tipo de dados ou da quantidade de argumentos.
+A sobrecarga de mÃ©todo em C++ permite que vocÃª tenha vÃ¡rios mÃ©todos com o mesmo nome dentro da mesma classe, mas
+com parÃ¢metros diferentes (tipo, quantidade ou ordem). Com base no exemplo da classe Calcular, ela pode resolver
+o problema de flexibilidade no uso da funÃ§Ã£o somar, dependendo do tipo de dados ou da quantidade de argumentos.
 
 Exemplo de problema que a sobrecarga resolve:
-Imagine que você quer somar:
+Imagine que vocÃª quer somar:
 - dois ints,
 - dois floats,
-- ou até três números de uma vez.
+- ou atÃ© trÃªs nÃºmeros de uma vez.
 
-Com sobrecarga, você pode fazer isso sem mudar o nome da função:
+Com sobrecarga, vocÃª pode fazer isso sem mudar o nome da funÃ§Ã£o:
 */
 
 #include <iostream>

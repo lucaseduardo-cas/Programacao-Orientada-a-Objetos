@@ -1,31 +1,31 @@
 /*
 Tarefa 18/03/2025
 MODIFCADORES DE TIPOS:
-private	  - Somente dentro da própria classe
-protected - Dentro da classe e suas subclasses (herança)
+private	  - Somente dentro da prÃ³pria classe
+protected - Dentro da classe e suas subclasses (heranÃ§a)
 public	  - Pode ser acessado de qualquer lugar (ex: no main)
 
 * private - atributo saldo
-- Ele é escondido da parte externa (como o main).
-- Só pode ser manipulado por métodos públicos da própria classe (depositar, sacar, consultarSaldo).
-- Isso protege contra alterações diretas indesejadas:
+- Ele Ã© escondido da parte externa (como o main).
+- SÃ³ pode ser manipulado por mÃ©todos pÃºblicos da prÃ³pria classe (depositar, sacar, consultarSaldo).
+- Isso protege contra alteraÃ§Ãµes diretas indesejadas:
     cliente1.saldo = 999999; // ? Isso seria um risco se fosse public
 
 * protected - atributo identificador
-- Ele não pode ser acessado fora da classe (como no main).
-- Mas pode ser acessado por classes que herdam ClienteBanco (se você fizesse herança futuramente).
+- Ele nÃ£o pode ser acessado fora da classe (como no main).
+- Mas pode ser acessado por classes que herdam ClienteBanco (se vocÃª fizesse heranÃ§a futuramente).
 - Bom pra manter o controle, mas permitir acesso controlado em classes filhas.
 
-* public - atributos nome e numeroConta + métodos
+* public - atributos nome e numeroConta + mÃ©todos
 - Podem ser acessados de qualquer lugar.
-- Métodos depositar, sacar, consultarSaldo, exibirIdentificador são a interface pública da sua classe,
+- MÃ©todos depositar, sacar, consultarSaldo, exibirIdentificador sÃ£o a interface pÃºblica da sua classe,
 ou seja, como o mundo externo interage com ela.
 
-* Encapsulamento - o que é isso?
-- Encapsular = esconder detalhes internos da classe, expondo só o necessário.
-- Você esconde saldo (com private) e obriga o usuário a usar métodos como depositar() e consultarSaldo(). Isso evita erros e garante segurança.
-- Exemplo de erro que seria possível se não usasse encapsulamento:
-cliente1.saldo = -999; // Isso seria um problema sério!
+* Encapsulamento - o que Ã© isso?
+- Encapsular = esconder detalhes internos da classe, expondo sÃ³ o necessÃ¡rio.
+- VocÃª esconde saldo (com private) e obriga o usuÃ¡rio a usar mÃ©todos como depositar() e consultarSaldo(). Isso evita erros e garante seguranÃ§a.
+- Exemplo de erro que seria possÃ­vel se nÃ£o usasse encapsulamento:
+cliente1.saldo = -999; // Isso seria um problema sÃ©rio!
 */
 
 #include <iostream>
@@ -33,16 +33,16 @@ cliente1.saldo = -999; // Isso seria um problema sério!
 
 class ClienteBanco {
 private:
-    double saldo = 1000.0; // Atributo encapsulado (somente a própria classe pode acessar)
+    double saldo = 1000.0; // Atributo encapsulado (somente a prÃ³pria classe pode acessar)
 
 protected:
-    int identificador; // Protegido: só a classe e suas herdeiras podem acessar
+    int identificador; // Protegido: sÃ³ a classe e suas herdeiras podem acessar
 
 public:
     std::string nome;
     std::string numeroConta;
 
-    // Método público: pode ser chamado no main
+    // MÃ©todo pÃºblico: pode ser chamado no main
     void inicializarCliente(const std::string& nomeCliente, int idCliente, const std::string& conta) {
         nome = nomeCliente;
         identificador = idCliente;
@@ -52,23 +52,23 @@ public:
                   << " | Conta: " << conta << std::endl;
     }
 
-    // Método público que acessa atributo privado indiretamente
+    // MÃ©todo pÃºblico que acessa atributo privado indiretamente
     void depositar(double valor) {
         if (valor < 0) {
             std::cout << "Valor negativo! Deposite um valor maior do que 0.\n";
         } else {
             saldo += valor;
-            std::cout << "Depósito de R$" << valor << " realizado com sucesso!\n";
+            std::cout << "DepÃ³sito de R$" << valor << " realizado com sucesso!\n";
         }
     }
 
-    // Outro método público
+    // Outro mÃ©todo pÃºblico
     void sacar(double valor) {
         if (valor >= 0 && valor <= saldo) {
             saldo -= valor;
             std::cout << "Saque de R$" << valor << " realizado com sucesso!\n";
         } else {
-            std::cout << "Saque inválido! Verifique o valor ou saldo insuficiente.\n";
+            std::cout << "Saque invÃ¡lido! Verifique o valor ou saldo insuficiente.\n";
         }
     }
 
@@ -91,8 +91,8 @@ int main() {
     cliente1.consultarSaldo();
     cliente1.exibirIdentificador();
 
-    // cliente1.saldo = 5000;         ? Não pode acessar atributo privado
-    // cliente1.identificador = 999; ? Não pode acessar atributo protected
+    // cliente1.saldo = 5000;         ? NÃ£o pode acessar atributo privado
+    // cliente1.identificador = 999; ? NÃ£o pode acessar atributo protected
 
     return 0;
 }

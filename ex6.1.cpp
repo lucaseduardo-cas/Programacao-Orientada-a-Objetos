@@ -1,10 +1,11 @@
-/*
-Tarefa 08/04/2025 
-* item 1 - Defina exemplos de associações com diferentes cardinaldiades. 
-Ou seja, 1:1, 1:N, N:N. Fazer o código em C++ e o diagrama de classes representando 
-suas associações.
 
-1:1 - Um CPF pertence a uma única Pessoa, e cada Pessoa tem um único CPF.
+/*
+Tarefa 08/04/2025
+* item 1 - Defina exemplos de associaÃ§Ãµes com diferentes cardinaldiades.
+Ou seja, 1:1, 1:N, N:N. Fazer o cÃ³digo em C++ e o diagrama de classes representando
+suas associaÃ§Ãµes.
+
+1:1 - Um CPF pertence a uma Ãºnica Pessoa, e cada Pessoa tem um Ãºnico CPF.
 
 Pessoa ---------1:1--------- CPF
 + nome                       + numero
@@ -37,7 +38,7 @@ public:
 
 int main() {
     CPF cpf("000.000.000-00");
-    Pessoa pessoa("João", cpf);
+    Pessoa pessoa("JoÃ£o", cpf);
     pessoa.mostrarDados();
 
     return 0;

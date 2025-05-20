@@ -1,6 +1,6 @@
 /*
 Tarefa 08/04/2025
-Item 2. Da mesma forma que o item 1, explore o conceito de herança múltipla.
+Item 2. Da mesma forma que o item 1, explore o conceito de heranÃ§aÂ mÃºltipla.
 
       Pessoa        Trabalhador       Estudante
          \              |               /
@@ -28,7 +28,7 @@ protected:
 public:
     Trabalhador(float salario) : salario(salario) {}
     void mostrarSalario() {
-        cout << "Salário: R$ " << salario << endl;
+        cout << "SalÃ¡rio: R$ " << salario << endl;
     }
 };
 
@@ -38,11 +38,11 @@ protected:
 public:
     Estudante(string matricula) : matricula(matricula) {}
     void mostrarMatricula() {
-        cout << "Matrícula: " << matricula << endl;
+        cout << "MatrÃ­cula: " << matricula << endl;
     }
 };
 
-// Herança múltipla: Estagiário herda de Pessoa, Trabalhador e Estudante
+// HeranÃ§a mÃºltipla: EstagiÃ¡rio herda de Pessoa, Trabalhador e Estudante
 class Estagiario : public Pessoa, public Trabalhador, public Estudante {
 public:
     Estagiario(string nome, float salario, string matricula)

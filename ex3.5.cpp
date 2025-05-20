@@ -1,12 +1,12 @@
 /*
 Tarefa 18/03/2025
-Código com herança: ClienteVip acessando identificador
-- Analogia rápida:
-private = tranca o dado no cofre. Só o próprio dono (a classe) tem a chave.
+CÃ³digo com heranÃ§a: ClienteVip acessando identificador
+- Analogia rÃ¡pida:
+private = tranca o dado no cofre. SÃ³ o prÃ³prio dono (a classe) tem a chave.
 
-protected = o dono e os filhos têm a chave.
+protected = o dono e os filhos tÃªm a chave.
 
-public = tá em cima da mesa, qualquer um vê.
+public = tÃ¡ em cima da mesa, qualquer um vÃª.
 */
 
 #include <iostream>
@@ -15,7 +15,7 @@ public = tá em cima da mesa, qualquer um vê.
 // Classe base
 class ClienteBanco {
 private:
-    double saldo = 1000.0; // privado: acesso só dentro da classe base
+    double saldo = 1000.0; // privado: acesso sÃ³ dentro da classe base
 
 protected:
     int identificador; // protegido: acesso dentro da classe e das herdeiras
@@ -63,11 +63,11 @@ int main() {
     ClienteVip vip;
     vip.inicializarCliente("Lucas Eduardo", 999, "4444-8");
 
-    // vip.identificador = 1234; ? Erro: identificador é protected, não pode ser acessado direto aqui
+    // vip.identificador = 1234; Erro: identificador Ã© protected, nÃ£o pode ser acessado direto aqui
     vip.depositar(500);
     vip.sacar(300);
 
-    vip.mostrarDadosVip(); // ? Aqui a classe derivada acessa os dados da base
+    vip.mostrarDadosVip(); // Aqui a classe derivada acessa os dados da base
 
     return 0;
 }

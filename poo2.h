@@ -20,7 +20,7 @@ private: // Elemento privado
 
 };
 
-// Construir mÐ¹todo AviÐ³o
+// Construir método Avião
 Aviao::Aviao(int tp) { // 1=Jato, 2=Monomotor, 3=Planador
     if (tp==1) {
         velMax=800;

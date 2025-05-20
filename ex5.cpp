@@ -1,8 +1,8 @@
 /*
 Tarefa 01/04/2025
-Escreva um programa com duas classes que apresentem um relacionamento por herança. O programa 
-deverá apresentar, construir, destruir, getter, setter. No exemplo, deverão ser explorados os 
-modificadores de tipo para atributos.
+Escreva um programa com duas classes que apresentem um relacionamento por heranÃ§a. O programa
+deverÃ¡ apresentar, construir, destruir, getter, setter. No exemplo, deverÃ£o ser explorados os
+modificadores de tipoÂ paraÂ atributos.
 */
 
 #include <iostream>
@@ -13,10 +13,10 @@ using namespace std;
 // Classe base que representa uma Pessoa
 class Pessoa {
 private:
-    string cpf; // Atributo privado: só acessível dentro da própria classe
+    string cpf; // Atributo privado: sÃ³ acessÃ­vel dentro da prÃ³pria classe
 
 protected:
-    string nome;  // Atributo protegido: acessível na classe base e derivadas
+    string nome;  // Atributo protegido: acessÃ­vel na classe base e derivadas
     int idade;
 
 public:
@@ -70,7 +70,7 @@ public:
 // Classe derivada Estudante, que herda de Pessoa
 class Estudante : public Pessoa {
 private:
-    string curso; // Atributo próprio da classe Estudante
+    string curso; // Atributo prÃ³prio da classe Estudante
 
 public:
     // Construtor da classe Estudante
@@ -110,20 +110,20 @@ public:
 
 int main() {
     // Criando objeto aluno com os dados iniciais
-    Estudante aluno("Lucas", 20, "000.000.000-00", "Sistemas de Informação");
+    Estudante aluno("Lucas", 20, "000.000.000-00", "Sistemas de InformaÃ§Ã£o");
 
     // Mostrando os dados iniciais
     aluno.exibirDados();
 
-    // Alterando dados com os métodos setters
-    cout << "\n[ ALTERAÇÕES NO OBJETO ALUNO ]\n";
+    // Alterando dados com os mÃ©todos setters
+    cout << "\n[ ALTERAÃ‡Ã•ES NO OBJETO ALUNO ]\n";
     aluno.setCurso("Engenharia de Software");
     aluno.setIdade(21);
     aluno.setCpf("111.111.111-11");
     aluno.setNome("Lucas Eduardo");
 
     // Exibindo os dados atualizados
-    cout << "\n[ DADOS ATUALIZADOS APÓS AS ALTERAÇÕES ]\n";
+    cout << "\n[ DADOS ATUALIZADOS APÃ“S AS ALTERAÃ‡Ã•ES ]\n";
     aluno.exibirDados();
 
     return 0;

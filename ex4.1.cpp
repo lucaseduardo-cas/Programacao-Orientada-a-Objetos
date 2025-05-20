@@ -25,7 +25,7 @@ public:
     }
 
     void exibirNome() {
-        cout << "O nome é: " << nome << endl;
+        cout << "O nome Ã©: " << nome << endl;
     }
 
 private:

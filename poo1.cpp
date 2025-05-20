@@ -4,18 +4,18 @@ using namespace std;
 
 // Declarando uma classe
 class Aviao {
-public: // Elemento público
-    // Declaração de parâmetros
+public: // Elemento pÃºblico
+    // DeclaraÃ§Ã£o de parÃ¢metros
     int vel=0; // par. 1
     int velMax; // par. 2
     string tipo; // par. 3
-    void ini (int tp); // Declaração de método chamado "ini", que recebe um parametro inteiro chamado "tp"
+    void ini (int tp); // DeclaraÃ§Ã£o de mÃ©todo chamado "ini", que recebe um parametro inteiro chamado "tp"
 
 private: // Elemento privado
 
 };
 
-// Construir método ini
+// Construir mÃ©todo ini
 void Aviao::ini(int tp) { // 1=Jato, 2=Monomotor, 3=Planador
     if (tp==1) {
         this->velMax=800;
@@ -35,7 +35,7 @@ int main () {
     Aviao *av2=new Aviao();
     Aviao *av3=new Aviao();
 
-    // Chamando método de inicialização
+    // Chamando mÃ©todo de inicializaÃ§Ã£o
     av1->ini(1);
     av2->ini(2);
     av3->ini(3);
@@ -45,7 +45,7 @@ int main () {
     cout << av2->velMax << endl;
     cout << av3->velMax << endl;
 
-    // Libera a memória alocada
+    // Libera a memÃ³ria alocada
     delete av1;
     delete av2;
     delete av3;

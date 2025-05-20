@@ -65,13 +65,13 @@ private:
 
 int main() {
     cout << "Criando objeto...\n";
-    Pessoa pessoa1("Talles", 25, "Goiânia");
+    Pessoa pessoa1("Talles", 25, "GoiÃ¢nia");
 
     pessoa1.exibirDados();
 
     // Usando os setters para atualizar os atributos
     pessoa1.setIdade(26);
-    pessoa1.setCidade("Brasília");
+    pessoa1.setCidade("BrasÃ­lia");
 
     cout << "Dados atualizados:\n";
     pessoa1.exibirDados();

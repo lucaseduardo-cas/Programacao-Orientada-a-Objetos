@@ -1,3 +1,4 @@
+
 // Exemplo professor
 
 #include <iostream>
@@ -22,7 +23,7 @@ public:
         cout << "Destrutor chamado para Pessoa: " << nome << endl;
     }
 
-    // Método público
+    // MÃ©todo pÃºblico
     void exibirDados() {
         cout << "Nome: " << nome << ", Idade: " << idade << endl;
     }
@@ -46,14 +47,14 @@ public:
         cout << "Destrutor chamado para Estudante: " << nome << endl;
     }
 
-    // Método público para exibir todos os dados
+    // MÃ©todo pÃºblico para exibir todos os dados
     void exibirDadosEstudante() {
-        exibirDados(); // Chama o método da classe base
+        exibirDados(); // Chama o mÃ©todo da classe base
         cout << "Curso: " << curso << endl;
     }
 
 protected:
-    // Método protegido
+    // MÃ©todo protegido
     void exibirCursoProtegido() {
         cout << "Curso (acesso protegido): " << curso << endl;
     }

@@ -1,6 +1,6 @@
 /*
-Tarefa 08/04/2025 
-1:N - Um Professor pode ter v·rias Turmas, mas cada Turma tem apenas um Professor.
+Tarefa 08/04/2025
+1:N - Um Professor pode ter v√°rias Turmas, mas cada Turma tem apenas um Professor.
 
 Professor ---------1:N--------- Turma
 + nome                           + nome
