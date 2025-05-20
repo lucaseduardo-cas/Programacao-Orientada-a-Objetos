@@ -13,51 +13,52 @@ Trazer um exemplo do uso de sobrecarga de método de função virtual (ou de mé
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-// Classe base
-class Animal {
+class Veiculo {
 public:
-    // Função virtual — pode ser sobrescrita
-    virtual void som() {
-        cout << "Animal faz som genérico" << endl;
-    }
+    string marca;
+    string modelo;
 
-    // Função com sobrecarga — parâmetros diferentes
-    void som(string nome) {
-        cout << nome << " faz um som indefinido" << endl;
+    Veiculo(string m, string mod) : marca(m), modelo(mod) {}
+
+    virtual void exibir() {
+        cout << "Veículo: " << marca << " " << modelo << endl;
     }
 };
 
-// Classe derivada
-class Cachorro : public Animal {
+class Carro : public Veiculo {
 public:
-    // Sobrescreve a função virtual
-    void som() override {
-        cout << "Cachorro: Au Au!" << endl;
-    }
+    string chassi;
 
-    // Sobrecarga na classe derivada também
-    void som(string nome) {
-        cout << nome << " está latindo!" << endl;
+    Carro(string m, string mod, string ch) : Veiculo(m, mod), chassi(ch) {}
+
+    void exibir() override {
+        cout << "Carro: " << marca << " " << modelo << ", Chassi: " << chassi << endl;
+    }
+};
+
+class Motocicleta : public Veiculo {
+public:
+    string cor;
+
+    Motocicleta(string m, string mod, string c) : Veiculo(m, mod), cor(c) {}
+
+    void exibir() override {
+        cout << "Motocicleta: " << marca << " " << modelo << ", Cor: " << cor << endl;
     }
 };
 
 int main() {
-    // Polimorfismo: ponteiro da base aponta para objeto da derivada
-    Animal* a = new Cachorro();
+    Veiculo* v1 = new Carro("Honda", "Civic", "12345");
+    Veiculo* v2 = new Motocicleta("Yamaha", "Fazer", "Vermelha");
 
-    // Vai chamar o método da classe derivada por ser virtual
-    a->som(); // Saída: Cachorro: Au Au!
+    v1->exibir();  // Chama exibir() da classe Carro
+    v2->exibir();  // Chama exibir() da classe Motocicleta
 
-    // Chama a versão com argumento string — não é virtual!
-    // E como estamos usando ponteiro de Animal, chama o método da classe base
-    a->som("Rex"); // Saída: Rex faz um som indefinido
+    delete v1;
+    delete v2;
 
-    // Para chamar a sobrecarga da derivada, precisa do tipo derivado
-    Cachorro c;
-    c.som("Bolt"); // Saída: Bolt está latindo!
-
-    delete a;
     return 0;
 }
