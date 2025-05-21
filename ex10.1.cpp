@@ -1,6 +1,4 @@
 /*
-Aula 20/05/2025 - Exemplo em sala
-
 try {
     // Bloco que queremos proteger
 } catch() // Captura e tratamento da exceção, sendo "()" o tipo de exceção 
