@@ -1,0 +1,32 @@
+Listando o conteúdo de uma pasta / diretório
+~ls
+
+Criando Pastas Linux
+~mkdir <nome_da_pasta>
+
+Navegando pelas Pastas
+~cd <nome_da_pasta>
+
+Craiando Subpastas
+~mkdir projetos-poo/<nome_subpasta>
+
+Removendo Pastas
+~rmdir <nome_da_pasta>
+
+Se a pasta não estiver vazia e você quiser remover a pasta e todo o seu conteúdo: (CUIDADO!!!, o comando rm -r é poderoso e pode apagar pastas permanentemente. Use-o com cautela!);
+~rm -r <nome_da_pasta>
+
+Movendo Arquivos
+~mv <arquivo_origem> destino
+
+Movendo Vários Arquivos
+~mv arquivo1.cpp arquivo2.cpp arquivo3.cpp UEG-Si/POO/1-Periodo/
+
+Renomeando Arquivos
+~mv arquivo_antigo.cpp arquivo_novo.cpp
+
+Movendo Arquivos e Renomeando
+~mv meu_programa.cpp UEG-Si/POO/1-Periodo/programa_poo.cpp
+
+Removendo Arquivos 
+~rm <nome_arquivo>
