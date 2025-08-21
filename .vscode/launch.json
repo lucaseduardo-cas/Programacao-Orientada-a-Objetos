@@ -2,6 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Pessoa",
+            "request": "launch",
+            "mainClass": "Pessoa",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "Conta",
+            "request": "launch",
+            "mainClass": "Conta",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
             "name": "Debug C Program",
             "type": "cppdbg",
             "request": "launch",
