@@ -1,4 +1,3 @@
-
 /*
 Exercício – Boas práticas de encapsulamento
 
@@ -10,6 +9,9 @@ Você precisará criar um cadastro de produtos para um sistema de inventário. P
 - Um método especifico para remover estoque (quantidade).
 - O custo unitário deve ser calculado conforme a média ponderada dos itens em estoque.
 - O preço deve ser 10% maior que o custo de unidade.
+
+
+  javac -d Classes Produto.java && java -cp Classes Produto
 */
 
 class Produto {
@@ -17,15 +19,36 @@ class Produto {
     private double custoUnitario;
     private int quantidade;
 
-    public String getNome(){
+    public Produto(String nome, int quantidade, double valorItem) {
+        if (nome != null && !nome.isEmpty()) {
+            this.nome = nome;
+        } else {
+            this.nome = "Sem nome";
+        }
+        if (quantidade > 0 && valorItem > 0) {
+            this.quantidade = quantidade;
+            this.custoUnitario = valorItem;
+        } else {
+            this.quantidade = 0;
+            this.custoUnitario = 0;
+        }
+    }
+
+    public Produto() {
+        this("Sem nome", 0, 0);
+    }
+
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
+    public void setNome(String nome) {
+        if (nome != null && !nome.isEmpty()) {
+            this.nome = nome;
+        }
     }
 
-    public double getCustoUnitario(){
+    public double getCustoUnitario() {
         return custoUnitario;
     }
 
@@ -33,26 +56,40 @@ class Produto {
         return quantidade;
     }
 
-    public double getPreco(){
-        return 1.1 * custoUnitario;
+    public double getPreco() {
+        return custoUnitario * 1.1;
     }
 
-    public void adicionaItem(int quantidade, double valorItem){
-        //ATUALIZAR AS QUANTIDADES E O CUSTO;
+    public void adicionaItem(int qtd, double valorItem) {
+        if (qtd > 0 && valorItem > 0) {
+            double valorTotalEstoque = custoUnitario * quantidade;
+            double valorNovo = valorItem * qtd;
+            quantidade += qtd;
+            custoUnitario = (valorTotalEstoque + valorNovo) / quantidade;
+        }
     }
 
-    public String toString(){
-        return "Produto: " + nome + " quantidade em estoque: " + quantidade + " custo: " + custoUnitario;
+    public void removerItem(int qtd) {
+        if (qtd > 0 && qtd <= quantidade) {
+            quantidade -= qtd;
+        }
+    }
+
+    public String toString() {
+        return "Produto: " + nome + 
+               " | Quantidade: " + quantidade + 
+               " | Custo: " + custoUnitario + 
+               " | Preço: " + getPreco();
     }
 }
 
 public class Aula3 {
     public static void main(String[] args) {
-        Produto produto1 = new Produto();
-        produto1.setNome("Notebook Positivo");
-        produto1.adicionaItem(10, 1000);
+        Produto produto1 = new Produto("Notebook Positivo", 10, 1000);
         System.out.println(produto1);
         produto1.adicionaItem(5, 500);
-        System.err.println(produto1);
+        System.out.println(produto1);
+        produto1.removerItem(3);
+        System.out.println(produto1);
     }
 }
