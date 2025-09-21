@@ -6,10 +6,14 @@ EstoqueInsuficienteException , para tratar situações específicas no seu siste
 de gerenciamento de estoque.
 Alterar o código da aula anterior para lançar e capturar essa exceção
 personalizada quando a quantidade em estoque for insuficiente. 
- */
+
+    javac -d Classes Aula4.java && java -cp Classes Aula4
+*/
 
 class EstoqueInsuficienteException extends Exception {
-
+    public EstoqueInsuficienteException(String mensagem) {
+        super(mensagem);
+    }
 }
 
 class Produto {
@@ -17,19 +21,21 @@ class Produto {
     private double custoUnitario;
     private int quantidade;
 
-    public Produto(){
-
+    public Produto() {
+        this.nome = "";
+        this.custoUnitario = 0;
+        this.quantidade = 0;
     }
 
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public double getCustoUnitario(){
+    public double getCustoUnitario() {
         return custoUnitario;
     }
 
@@ -37,33 +43,35 @@ class Produto {
         return quantidade;
     }
 
-    public double getPreco(){
+    public double getPreco() {
         return 1.1 * custoUnitario;
     }
 
-    public void adicionaItem(int quantidade, double valorItem){
-        //ATUALIZAR AS QUANTIDADES E O CUSTO;
-    }
-
-    public void removeItens(int quantidade) throws EstoqueInsuficienteException{
-        Produto produto = null;
-        produto = new Produto();
-
-        if(this.quantidade < quantidade){
-            throw new EstoqueInsuficienteException();
+    public void adicionaItem(int qtd, double valorItem) {
+        if (qtd > 0 && valorItem > 0) {
+            double totalAtual = custoUnitario * quantidade;
+            double totalNovo = valorItem * qtd;
+            quantidade += qtd;
+            custoUnitario = (totalAtual + totalNovo) / quantidade;
         }
     }
 
-    public String toString(){
-        return "Produto: " + nome + " quantidade em estoque: " + quantidade + " custo: " + custoUnitario;
+    public void removeItens(int qtd) throws EstoqueInsuficienteException {
+        if (qtd > quantidade) {
+            throw new EstoqueInsuficienteException("Estoque insuficiente");
+        }
+        quantidade -= qtd;
     }
 
+    public String toString() {
+        return "Produto: " + nome + 
+               " quantidade em estoque: " + quantidade + 
+               " custo: " + custoUnitario + 
+               " preço: " + getPreco();
+    }
 }
 
-
-
 public class Aula4 {
-
     public static void main(String[] args) {
         Produto produto1 = new Produto();
         produto1.setNome("Notebook Positivo");
@@ -72,9 +80,8 @@ public class Aula4 {
         try {
             produto1.removeItens(15);
         } catch (EstoqueInsuficienteException ex) {
-            System.err.println("Você tentou retirar mais itens do que disponivel no estoque");
+            System.err.println("Você tentou retirar mais itens do que disponível no estoque");
         }
-        System.err.println(produto1);
+        System.out.println(produto1);
     }
-    
 }

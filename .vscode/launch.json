@@ -1,39 +1,78 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Pessoa",
-            "request": "launch",
-            "mainClass": "Pessoa",
-            "projectName": "poo-i_27d92f84"
-        },
-        {
-            "type": "java",
-            "name": "Conta",
-            "request": "launch",
-            "mainClass": "Conta",
-            "projectName": "poo-i_27d92f84"
-        },
-        {
-            "name": "Debug C Program",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "C:/Users/Lucas/OneDrive/Documentos/UEG-SI/Linguagens/C/Algoritmos_e_Programação_1/Lista_6_For/${fileBasenameNoExtension}.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "C:/Users/Lucas/OneDrive/Documentos/UEG-SI/Linguagens/C/Algoritmos_e_Programação_1/Lista_6_For",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:/mingw/bin/gdb.exe",
-            "setupCommands": [
-                {
-                    "description": "Habilitar formatação para variáveis",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "type": "java",
+        "name": "TesteConta",
+        "request": "launch",
+        "mainClass": "TesteConta",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "ExemploPolimorfismo",
+        "request": "launch",
+        "mainClass": "ExemploPolimorfismo",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "ExemploObjeto",
+        "request": "launch",
+        "mainClass": "ExemploObjeto",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "ExemploObjeto",
+        "request": "launch",
+        "mainClass": "JAVA.Aulas.Aula6.ExemploObjeto",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "Biblioteca",
+        "request": "launch",
+        "mainClass": "Biblioteca",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "TestePolimorfismo",
+        "request": "launch",
+        "mainClass": "JAVA.Exemplos.TestePolimorfismo",
+        "projectName": "poo-i_27d92f84"
+    },
+    {
+        "type": "java",
+        "name": "TestePolimorfismo",
+        "request": "launch",
+        "mainClass": "Exemplos.TestePolimorfismo",
+        "projectName": "poo-i_27d92f84",
+        "console": "integratedTerminal",
+        "cwd": "${workspaceFolder}"
+    },
+    {
+        "name": "Debug C Program",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "C:/Users/Lucas/OneDrive/Documentos/UEG-SI/Linguagens/C/Algoritmos_e_Programação_1/Lista_6_For/${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "C:/Users/Lucas/OneDrive/Documentos/UEG-SI/Linguagens/C/Algoritmos_e_Programação_1/Lista_6_For",
+        "environment": [],
+        "externalConsole": true,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:/mingw/bin/gdb.exe",
+        "setupCommands": [
+            {
+                "description": "Habilitar formatação para variáveis",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            }
+        ]
+    }
+]
 }
+
+
