@@ -51,9 +51,12 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
+
     "C_Cpp.default.customConfigurationVariables": {
 
     },
+
+    "java.project.outputPath": "bin",
     "files.encoding": "utf8",
     "files.autoGuessEncoding": true,
     "java.debug.settings.onBuildFailureProceed": true
