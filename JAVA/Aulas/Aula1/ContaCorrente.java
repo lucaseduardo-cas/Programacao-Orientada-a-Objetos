@@ -14,6 +14,7 @@ public class ContaCorrente {
     private double saldo;
     private String senha;
 
+    // Método construtor ContaCorrente
     public ContaCorrente (String senha) {
         this.senha = senha;
         this.saldo = 0.0;
@@ -37,6 +38,7 @@ public class ContaCorrente {
     }
 
     public static void main(String[] args) {
+        // Objeto minhaConta criado
         ContaCorrente minhaConta = new ContaCorrente("minhasenha123");
         System.out.println("Saldo com senha incorreta: " + minhaConta.getSaldo("senhaerrada"));
         System.out.println("Tentando depositar -100: " + minhaConta.depositar(-100));

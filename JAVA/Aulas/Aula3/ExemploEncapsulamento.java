@@ -115,7 +115,8 @@ public class ExemploEncapsulamento {
         // Demonstração da validação em um setter
         try {
             System.out.println("\nTentando criar um produto com quantidade negativa...");
-            Produto produtoInvalido = new Produto("Suco", 7.0, -5, dataDeAmanha);
+            // A variável é removida, pois o objeto não será usado
+            new Produto("Suco", 7.0, -5, dataDeAmanha); 
         } catch (IllegalArgumentException e) {
             // A exceção é esperada por causa da validação
             System.out.println("SUCESSO: Capturamos o erro esperado -> " + e.getMessage());

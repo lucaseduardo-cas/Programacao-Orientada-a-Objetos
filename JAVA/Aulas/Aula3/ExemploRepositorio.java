@@ -68,10 +68,21 @@ class RepositorioUsuarioBD implements RepositorioUsuario {
     public void salvar(Usuario usuario) {
         // Implementação específica para BD
         String sql = "INSERT INTO usuario (nome, email) VALUES (?, ?)";
+        System.out.println("[BD] Executando SQL: " + sql); // Adicionado para usar a variável 'sql'
         System.out.println("[BD] Salvando usuário: " + usuario.getNome());
         // ... código de inserção no banco de dados
     }
 
+    /* 
+    @Override
+    public void salvar(Usuario usuario) {
+        // Implementação específica para BD
+        String sql = "INSERT INTO usuario (nome, email) VALUES (?, ?)";
+        System.out.println("[BD] Salvando usuário: " + usuario.getNome());
+        // ... código de inserção no banco de dados
+    }
+    */
+    
     @Override
     public Usuario buscarPorId(Long id) {
         // Implementação específica para BD

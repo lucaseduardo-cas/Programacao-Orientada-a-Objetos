@@ -3,6 +3,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ExemploGenerics",
+            "request": "launch",
+            "mainClass": "ExemploGenerics",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "ContaCorrente",
+            "request": "launch",
+            "mainClass": "ContaCorrente",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "PolimorfismoEmAcao",
+            "request": "launch",
+            "mainClass": "PolimorfismoEmAcao",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "ExemploEncapsulamento",
+            "request": "launch",
+            "mainClass": "ExemploEncapsulamento",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "ExemploRuntimeException",
+            "request": "launch",
+            "mainClass": "ExemploRuntimeException",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "ExemploCollection",
+            "request": "launch",
+            "mainClass": "ExemploCollection",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
+            "name": "ExemploOrdenacao",
+            "request": "launch",
+            "mainClass": "ExemploOrdenacao",
+            "projectName": "poo-i_27d92f84"
+        },
+        {
+            "type": "java",
             "name": "ExemploSet",
             "request": "launch",
             "mainClass": "ExemploSet",

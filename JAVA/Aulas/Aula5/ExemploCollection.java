@@ -17,7 +17,6 @@ tamanho e limpar a coleção.
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 
 // Collection: estende Iterable, representa um grupo de objetos
 // (elementos).
