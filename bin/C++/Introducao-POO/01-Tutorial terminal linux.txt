@@ -1,0 +1,12 @@
+No VS Code vá em terminal e depois New Terminal:
+
+- wsl
+
+- c++ -o arquivo arquivo.cpp
+
+- ./arquivo
+
+
+- clear (se falhar?) : 
+- reset 
+
